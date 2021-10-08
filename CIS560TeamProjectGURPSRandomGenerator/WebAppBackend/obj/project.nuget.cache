@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DCiMdzPmOKloRvpqChwMmVrEo1WSj32aGu+uZgE5vg1VgpRodQcOojil4jA1sdJ4jQ9FErrbtHrQk8/KOktwSw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\CIS560TeamProjectGURPSRandomGenerator\\WebAppBackend\\WebAppBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
