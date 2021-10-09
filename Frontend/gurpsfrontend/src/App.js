@@ -6,19 +6,24 @@ import OriginalGeneratorPage from "./components/generatorPages/OriginalGenerator
 import SpicyGeneratorPage from "./components/generatorPages/SpicyGeneratorPage";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import TableInfoPage from "./components/tableInfoPage/TableInfoPage";
+import { Fragment } from "react/cjs/react.production.min";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(null);
-  const [userName, setUserName] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [userName, setUserName] = useState("Sarah");
   return (
     <PageWrapper>
       <div>
-        <Header />
+        <Header userName={userName} />
         <Sidebar isLoggedIn={isLoggedIn} />
         <Switch>
           <Route exact path="/" component={OriginalGeneratorPage} />
           {isLoggedIn && (
-            <Route path="/spicygenerator" component={SpicyGeneratorPage} />
+            <Fragment>
+              <Route path="/spicygenerator" component={SpicyGeneratorPage} />
+              <Route path="/tableinfo" component={TableInfoPage} />
+            </Fragment>
           )}
         </Switch>
       </div>
