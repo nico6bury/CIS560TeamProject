@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import styled from "styled-components";
+import { Route, Switch } from "react-router";
+import OriginalGeneratorPage from "./components/generatorPages/OriginalGeneratorPage";
+import SpicyGeneratorPage from "./components/generatorPages/SpicyGeneratorPage";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [userName, setUserName] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageWrapper>
+      <div>
+        <Header />
+        <Sidebar isLoggedIn={isLoggedIn} />
+        <Switch>
+          <Route exact path="/" component={OriginalGeneratorPage} />
+          {isLoggedIn && (
+            <Route path="/spicygenerator" component={SpicyGeneratorPage} />
+          )}
+        </Switch>
+      </div>
+    </PageWrapper>
   );
 }
+
+const PageWrapper = styled.nav`
+  display: flex;
+`;
 
 export default App;

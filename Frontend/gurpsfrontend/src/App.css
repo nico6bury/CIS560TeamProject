@@ -1,3 +1,20 @@
+:root {
+  --primaryOrangeColor: #ff971d;
+  --primaryPurpleColor: #8c0aa9;
+  --secondaryOrangeColor: #ffec73;
+  --secondaryPurpleColor: #4d0180;
+  --primaryRedColor: #eb1737;
+}
+
+.mainBtn {
+  background-color: var(--primaryOrangeColor);
+  color: black;
+}
+
+.mainLink {
+  color: var(--primaryOrangeColor);
+}
+
 .App {
   text-align: center;
 }
