@@ -16,16 +16,18 @@ function App() {
     <PageWrapper>
       <div>
         <Header userName={userName} />
-        <Sidebar isLoggedIn={isLoggedIn} />
-        <Switch>
-          <Route exact path="/" component={OriginalGeneratorPage} />
-          {isLoggedIn && (
-            <Fragment>
-              <Route path="/spicygenerator" component={SpicyGeneratorPage} />
-              <Route path="/tableinfo" component={TableInfoPage} />
-            </Fragment>
-          )}
-        </Switch>
+        <div className="contentWrapper">
+          <Sidebar isLoggedIn={isLoggedIn} />
+          <Switch>
+            <Route exact path="/" component={OriginalGeneratorPage} />
+            {isLoggedIn && (
+              <Fragment>
+                <Route path="/spicygenerator" component={SpicyGeneratorPage} />
+                <Route path="/tableinfo" component={TableInfoPage} />
+              </Fragment>
+            )}
+          </Switch>
+        </div>
       </div>
     </PageWrapper>
   );
@@ -33,6 +35,12 @@ function App() {
 
 const PageWrapper = styled.nav`
   display: flex;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
 `;
 
 export default App;

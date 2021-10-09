@@ -17,8 +17,8 @@ export default function GenerateBox({ typeBox, tables }) {
   return (
     <PageWrapper>
       <div>
-        <form>
-          <textarea readOnly={true} value={nextGenerated} />
+        <form className="generate-form">
+          <input readOnly={true} value={nextGenerated} className="textBox" />
           <button className="mainBtn" onClick={handleClick}>
             Generate!
           </button>
@@ -31,4 +31,13 @@ export default function GenerateBox({ typeBox, tables }) {
 const PageWrapper = styled.nav`
   display: flex;
   flex-direction: column;
+
+  .generate-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3px;
+  }
+  .textBox {
+    margin-bottom: 5px;
+  }
 `;
