@@ -3,18 +3,25 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import mainLogo from "../images/mainLogo.jpg";
 
-export default function Header({ userName }) {
+export default function Header({ userName, isLoggedIn }) {
   return (
     <PageWrapper>
       <div className="headerMain">
         <img src={mainLogo} className="logo" alt="GURPS Book image"></img>
-        <div className="headerTitle">GURPS Loot Random Generation</div>
+        <div className="headerTitle">GURPS Loot Random Generator</div>
         <div className="headerSub">
-          <div>Welcome {userName}</div>
-          <div className="links">
-            <Link className="mainLink">Login</Link>
-            <Link className="mainLink">Create Account</Link>
-          </div>
+          {isLoggedIn && (
+            <div>
+              <div>Welcome {userName}</div>
+              <Link className="mainLink">Logout</Link>
+            </div>
+          )}
+          {!isLoggedIn && (
+            <div className="links">
+              <Link className="mainLink">Login</Link>
+              <Link className="mainLink">Create Account</Link>
+            </div>
+          )}
         </div>
       </div>
     </PageWrapper>

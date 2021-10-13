@@ -15,7 +15,7 @@ function App() {
   return (
     <PageWrapper>
       <div>
-        <Header userName={userName} />
+        <Header userName={userName} isLoggedIn={isLoggedIn} />
         <div className="contentWrapper">
           <Sidebar isLoggedIn={isLoggedIn} />
           <Switch>
