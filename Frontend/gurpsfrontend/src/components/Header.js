@@ -2,8 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import mainLogo from "../images/mainLogo.jpg";
+import { useHistory } from "react-router-dom";
 
-export default function Header({ userName, isLoggedIn }) {
+export default function Header({ userName, isLoggedIn, setIsLoggedIn }) {
+  document.body.style.margin = 0;
+  const history = useHistory();
+
+  const HandleLogoutClick = (e) => {
+    setIsLoggedIn(false);
+    history.push("/");
+  };
+
   return (
     <PageWrapper>
       <div className="headerMain">
@@ -13,13 +22,19 @@ export default function Header({ userName, isLoggedIn }) {
           {isLoggedIn && (
             <div>
               <div>Welcome {userName}</div>
-              <Link className="mainLink">Logout</Link>
+              <Link className="mainLink" to="/">
+                <span onClick={HandleLogoutClick}>Logout</span>
+              </Link>
             </div>
           )}
           {!isLoggedIn && (
             <div className="links">
-              <Link className="mainLink">Login</Link>
-              <Link className="mainLink">Create Account</Link>
+              <Link className="mainLink" to="/login">
+                Login
+              </Link>
+              <Link className="mainLink" to="/signup">
+                Create Account
+              </Link>
             </div>
           )}
         </div>
@@ -31,13 +46,13 @@ export default function Header({ userName, isLoggedIn }) {
 const PageWrapper = styled.nav`
   position: -webkit-sticky;
   position: sticky;
-  //position: fixed;
   top: 0;
-  //width: 100%;
   padding: 1rem 1.5rem;
   background: var(--darkPurpleColor);
   border-bottom: 5px solid var(--primaryOrangeColor);
   z-index: 999;
+  width: 100%;
+  margin: 0;
   .headerMain {
     display: flex;
     align-items: center;
@@ -45,6 +60,7 @@ const PageWrapper = styled.nav`
     flex-direction: row;
     //max-width: 1500px;
     margin: 5 auto;
+    width: 100%;
   }
   .headerTitle {
     font-size: 2.5rem;

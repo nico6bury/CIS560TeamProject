@@ -41,12 +41,14 @@
 }
 
 html,
-body {
-  width: 100%;
+body,
+#app,
+#app > div {
+  width: 100% !important;
   font-family: "Source Sans Pro";
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
+  margin: 0px !important;
+  padding: 0px !important;
+  height: 100% !important;
 }
 
 .App {
