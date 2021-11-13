@@ -88,7 +88,7 @@ function App() {
               render={(props) => <LoginPage setIsLoggedIn={setIsLoggedIn} />}
             />
             <Route
-              path="signup"
+              path="/signup"
               render={(props) => <SignUpPage setIsLoggedIn={setIsLoggedIn} />}
             />
             {isLoggedIn && (

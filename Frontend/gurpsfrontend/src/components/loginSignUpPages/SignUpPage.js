@@ -11,7 +11,7 @@ export default function SignUpPage({ setIsLoggedIn }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     //If the user hasn't entered anything in the boxes, just return
-    if (username.length < 1 || password.length < 1) {
+    if (username.length < 1 || password.length < 8) {
       setIsLoaded("incorrect");
       return;
     }
@@ -20,6 +20,7 @@ export default function SignUpPage({ setIsLoggedIn }) {
 
     //The following is for testing purposes and is to simulate a call to the backend to log the user in
     //setIsLoaded("incorrect");
+    history.push("/");
     setIsLoggedIn(true);
   };
 
@@ -68,7 +69,7 @@ export default function SignUpPage({ setIsLoggedIn }) {
   return (
     <PageWrapper>
       <form className="formWrapper">
-        <div className="loginLabel">GURPS Random Generator Login</div>
+        <div className="loginLabel">GURPS Random Generator Sign Up</div>
         <div className="inputDiv">
           {/* <p>Username</p> */}
           <input
@@ -87,15 +88,15 @@ export default function SignUpPage({ setIsLoggedIn }) {
         </div>
         <div>
           <button className="mainBtn" onClick={handleSubmit}>
-            Sign in
+            Sign up!
           </button>
         </div>
         {isLoaded === "error" && (
-          <div className="errorMessage">Error logging in.</div>
+          <div className="errorMessage">Error signing up.</div>
         )}
         {isLoaded === "incorrect" && (
           <div className="errorMessage">
-            Incorrect username or password. Please try again.
+            Please make sure your password is at least 8 characters.
           </div>
         )}
       </form>
