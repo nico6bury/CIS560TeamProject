@@ -10,6 +10,7 @@ import { Fragment } from "react/cjs/react.production.min";
 import "./App.css";
 import LoginPage from "./components/loginSignUpPages/LoginPage";
 import SignUpPage from "./components/loginSignUpPages/SignUpPage";
+import EditTablesPage from "./components/editTablesPage/EditTablesPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -95,6 +96,7 @@ function App() {
               <Fragment>
                 <Route path="/spicygenerator" component={SpicyGeneratorPage} />
                 <Route path="/tableinfo" component={TableInfoPage} />
+                <Route path="/edittables" component={EditTablesPage} />
               </Fragment>
             )}
           </Switch>
