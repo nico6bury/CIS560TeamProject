@@ -1,5 +1,3 @@
--- schema names are AppRecords and GeneratedItems
-
 -- drop all the tables
 DROP TABLE IF EXISTS AppRecords.ItemTypeOption;
 DROP TABLE IF EXISTS AppRecords.ItemSubcategory;
