@@ -15,7 +15,7 @@ namespace WebAppBackend
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-        }
+        }//end constructor
 
         public IConfiguration Configuration { get; }
 
@@ -23,7 +23,7 @@ namespace WebAppBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-        }
+        }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,11 +31,11 @@ namespace WebAppBackend
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
+            }//end if
             else
             {
                 app.UseExceptionHandler("/Error");
-            }
+            }//end else
 
             app.UseStaticFiles();
 
@@ -47,6 +47,6 @@ namespace WebAppBackend
             {
                 endpoints.MapRazorPages();
             });
-        }
-    }
-}
+        }//end Configure(app, env)
+    }//end class Startup
+}//end namespace
