@@ -19,7 +19,7 @@ let fakeData = [
     price: "$100000.90",
   },
 ];
-export default function GenerateBox({ typeBox, tables }) {
+export default function GenerateBox({ typeBox, originalData, spicyData }) {
   const [nextGenerated, setNextGenerated] = useState("");
   const [counter, setCounter] = useState(0);
   const [isLoaded, setIsLoaded] = useState("");
@@ -31,12 +31,25 @@ export default function GenerateBox({ typeBox, tables }) {
     //setCounter(counter + 1);
     //setNextGenerated(counter);
 
-    //Here is where you will make a call to the backend for information
-    //Pass it the tables to include, and other filters
+    //Checking if the number to generate is a valid number to enter
     if (numberGenerate.length < 1 || parseInt(numberGenerate) > 20) {
       setIsLoaded("invalid");
       return;
     }
+
+    //Looping through the data to determine what tables to include
+    let tables = [];
+    originalData.map((item) => {
+      if (item.checked === true) {
+        tables.push(item);
+      }
+    });
+    spicyData.map((item) => {
+      if (item.checked === true) {
+        tables.push(item);
+      }
+    });
+
     setIsLoaded("okay");
     //doFetch(typeBox, tables);
     setRandResult(fakeData);

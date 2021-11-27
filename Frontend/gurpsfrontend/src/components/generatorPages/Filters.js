@@ -24,7 +24,10 @@ export default function Filter({
           setData={setItemCategoryData}
         />
         {isSpicy && (
-          <FilterCheckboxes data={userTables} setData={setUserTables} />
+          <div>
+            <div className="sectionHeader">User-Defined Categories</div>
+            <FilterCheckboxes data={userTables} setData={setUserTables} />
+          </div>
         )}
       </div>
     </PageWrapper>
