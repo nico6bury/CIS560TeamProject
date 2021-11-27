@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import AddItems from "./AddItems";
 import CreateTable from "./CreateTable";
 import DisplayAndEditTables from "./DisplayAndEditTables";
 
@@ -7,6 +8,7 @@ let fakeUserData = [
   {
     table: "swords",
     creatingUser: "User1",
+    id: 1,
     data: [
       {
         name: "wooden sword",
@@ -23,6 +25,7 @@ let fakeUserData = [
   {
     table: "animals",
     creatingUser: "User2",
+    id: 2,
     data: [
       {
         name: "flamingo",
@@ -47,6 +50,7 @@ export default function EditTablesPage({ userId }) {
       <DisplayAndEditTables tableData={tableData} />
       <div className="separaterBottom" />
       <CreateTable userId={userId} />
+      <AddItems tables={tableData} />
     </PageWrapper>
   );
 }
