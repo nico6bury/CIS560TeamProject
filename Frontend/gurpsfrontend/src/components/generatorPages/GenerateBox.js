@@ -66,6 +66,7 @@ export default function GenerateBox({ typeBox, originalData, spicyData }) {
       body: JSON.stringify({
         tables: tablesToInclude,
         numberGenerate: numberGenerate,
+        typeRequest: "getRandomLoot",
       }),
     })
       .then((res) => res.json())

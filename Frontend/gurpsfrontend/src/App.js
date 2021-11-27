@@ -96,7 +96,10 @@ function App() {
               <Fragment>
                 <Route path="/spicygenerator" component={SpicyGeneratorPage} />
                 <Route path="/tableinfo" component={TableInfoPage} />
-                <Route path="/edittables" component={EditTablesPage} />
+                <Route
+                  path="/edittables"
+                  render={(props) => <EditTablesPage userId={userId} />}
+                />
               </Fragment>
             )}
           </Switch>
