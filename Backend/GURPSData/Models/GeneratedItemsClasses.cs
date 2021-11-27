@@ -91,6 +91,16 @@ namespace GURPSData.Models {
             this.Quantity = quantity; this.UnitPrice = unitPrice; this.BaseWeight = baseWeight;
             this.WeightType = weightType; this.GeneratedOn = generatedOn; this.EditedOn = editedOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with InventoryID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>InventoryID of this object.</returns>
+        public override int GetHashCode() {
+            return InventoryID;
+        }//end GetHashCode()
     }//end class InventoryItem
     /// <summary>
     /// A class representing the CreatedEnchantment table in the GeneratedItems schema. Holds
@@ -153,6 +163,16 @@ namespace GURPSData.Models {
             this.Cost = cost; this.WeightFactor = weightFactor;
             this.PowerReserveType = powerReserveType; this.PowerReserveAmount = powerReserveAmount;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with CreatedEnchantmentID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>CreatedEnchantmentID of this object.</returns>
+        public override int GetHashCode() {
+            return CreatedEnchantmentID;
+        }//end GetHashCode()
     }//enc class CreatedEnchantment
     /// <summary>
     /// A class representing the CreatedEmbellishment table in the GeneratedItems schema. Holds
@@ -204,6 +224,16 @@ namespace GURPSData.Models {
             this.Description = description; this.GeneratingCategoryName = generatingCategoryName;
             this.CostFactor = costFactor; this.WeightFactor = weightFactor;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with CreatedEmbellishmentID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>CreatedEmbellishmentID of this object.</returns>
+        public override int GetHashCode() {
+            return CreatedEmbellishmentID;
+        }//end GetHashCode()
     }//end class CreatedEmbellishment
     /// <summary>
     /// A class representing the EnchantmentRef table in the GeneratedItems schema. This class

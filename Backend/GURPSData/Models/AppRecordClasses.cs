@@ -51,6 +51,16 @@ namespace GURPSData.Models {
             this.UserID = userID; this.Username = username; this.Password = password;
             this.IsAdmin = isAdmin; this.JoinedOn = joinedOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with UserID. This should work
+        /// as long as objects of type User are only stored in sets with
+        /// other objects of exactly type User.
+        /// </summary>
+        /// <returns>UserID of this object.</returns>
+        public override int GetHashCode() {
+            return UserID;
+        }//end GetHashCode()
     }//end class User
     /// <summary>
     /// A class representing the ItemCategory table in the AppRecords schema. Holds information
@@ -91,6 +101,16 @@ namespace GURPSData.Models {
             this.ItemCategoryID = ItemCategoryID; this.OwningUserID = owningUserID;
             this.Name = name; this.IsDefault = isDefault; this.CreatedOn = createdOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with ItemCategoryID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>ItemCategoryID of this object.</returns>
+        public override int GetHashCode() {
+            return ItemCategoryID;
+        }//end GetHashCode()
     }//end class ItemCategory
     /// <summary>
     /// A class which represents a single item, along with all the statistical information about
@@ -162,6 +182,16 @@ namespace GURPSData.Models {
             this.WeightType = weightType; this.QuantityMin = quantityMin; this.QuantityMax = quantityMax;
             this.Description = description; this.RelativeChance = relativeChance; this.CreatedOn = createdOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with ItemID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>ItemID of this object.</returns>
+        public override int GetHashCode() {
+            return ItemID;
+        }//end GetHashCode()
     }//end class Item
     /// <summary>
     /// A linking class of sorts that links the Item, ItemCategory, and ItemTypeOption
@@ -199,6 +229,16 @@ namespace GURPSData.Models {
             this.ItemSubcategoryID = itemSubcategoryID; this.ItemCategoryID = itemCategory;
             this.ItemID = itemID; this.Name = name;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with ItemSubcategoryID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>ItemSubcategoryID of this object.</returns>
+        public override int GetHashCode() {
+            return ItemSubcategoryID;
+        }//end GetHashCode()
     }//end class ItemSubcategory
     /// <summary>
     /// This class represents one option of multiple different types of a partular item. For
@@ -255,6 +295,16 @@ namespace GURPSData.Models {
             this.RelativeChance = relativeChance; this.PriceChange = priceChange;
             this.WeightChange = weightChange; this.DescriptionAddition = descriptionAddition;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with ItemTypeOptionID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>ItemTypeOptionID of this object.</returns>
+        public override int GetHashCode() {
+            return ItemTypeOptionID;
+        }//end GetHashCode()
     }//end class ItemTypeOption
     /// <summary>
     /// A class representing a category of embellishments.
@@ -302,6 +352,16 @@ namespace GURPSData.Models {
             this.RelativeChance = relativeChance; this.Description = description;
             this.CreatedOn = createdOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with EmbellishmentCategoryID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>EmbellishmentCategoryID of this object.</returns>
+        public override int GetHashCode() {
+            return EmbellishmentCategoryID;
+        }//end GetHashCode()
     }//end class EmbellishmentCategory
     /// <summary>
     /// A class representing a particular embellishment that an item might have.
@@ -362,6 +422,16 @@ namespace GURPSData.Models {
             this.WeightFactor = weightFactor;
             this.RelativeChance = relativeChance; this.CreatedOn = createdOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with EmbellishmentID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>EmbellishmentID of this object.</returns>
+        public override int GetHashCode() {
+            return EmbellishmentID;
+        }//end GetHashCode()
     }//end class Embellishment
     /// <summary>
     /// A class representing a category of enchantments.
@@ -408,6 +478,16 @@ namespace GURPSData.Models {
             this.OwningUserID = owningUserID; this.Name = name;
             this.Description = description; this.CreatedOn = createdOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with EnchantmentCategoryID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>EnchantmentCategoryID of this object.</returns>
+        public override int GetHashCode() {
+            return EnchantmentCategoryID;
+        }//end GetHashCode()
     }//end class EnchantmentCategory
     /// <summary>
     /// A class representing a particular enchantment that an item might have.
@@ -480,5 +560,15 @@ namespace GURPSData.Models {
             this.PowerReserveType = powerReserveType; this.PowerReserveAmount = powerReserveAmount;
             this.CreatedOn = createdOn;
         }//end constructor
+
+        /// <summary>
+        /// Replaces hash code generation with EnchantmentID.
+        /// This should work as long as objects of type User are
+        /// only stored in sets with other objects of exactly type User.
+        /// </summary>
+        /// <returns>EnchantmentID of this object.</returns>
+        public override int GetHashCode() {
+            return EnchantmentID;
+        }//end GetHashCode()
     }//end class Enchantment
 }//end namespace
