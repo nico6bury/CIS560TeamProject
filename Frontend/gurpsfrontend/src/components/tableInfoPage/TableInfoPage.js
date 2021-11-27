@@ -1,5 +1,104 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import UserTable from "./UserTable";
+
+let fakeUserData = [
+  {
+    table: "swords",
+    creatingUser: "User1",
+    data: [
+      {
+        name: "wooden sword",
+        id: 1,
+        basePrice: "34.5",
+      },
+      {
+        name: "metal sword",
+        id: 2,
+        basePrice: "100.4",
+      },
+    ],
+  },
+  {
+    table: "animals",
+    creatingUser: "User2",
+    data: [
+      {
+        name: "flamingo",
+        id: 1,
+        basePrice: "5.00",
+      },
+      {
+        name: "tiger",
+        id: 2,
+        basePrice: "6.89",
+      },
+    ],
+  },
+];
 
 export default function TableInfoPage() {
-  return <div>Hello from TableInfoPage</div>;
+  const [userTables, setUserTables] = useState(fakeUserData);
+  const [isLoaded, setIsLoaded] = useState("");
+
+  useEffect(() => {
+    //doFetch();
+  });
+
+  const doFetch = () => {
+    fetch("http://localhost:5000/req/generate", {
+      method: "post",
+      headers: {
+        //"Content-Type": "application/json",
+        //"Access-Control-Allow-Credentials": true,
+      },
+      //credentials: "include",
+      body: JSON.stringify({
+        typeRequest: "getUserDefinedTables",
+      }),
+    })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+          //If there was an error fetching the data
+          if (result.response.apiStatusCode !== "OK") {
+            setIsLoaded("error");
+            return;
+          } else {
+            setIsLoaded("loaded");
+          }
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded("error");
+          //console.log(error);
+        }
+      );
+  };
+
+  const Tables = () => {
+    let toReturn = userTables.map((item) => {
+      return (
+        <div>
+          <h3>
+            {item.table} - {item.creatingUser}
+          </h3>
+          <UserTable data={item.data} />
+        </div>
+      );
+    });
+    return <div>{toReturn}</div>;
+  };
+
+  return (
+    <PageWrapper>
+      <h1>User-Defined Tables</h1>
+      <Tables />
+    </PageWrapper>
+  );
 }
+
+const PageWrapper = styled.nav``;
