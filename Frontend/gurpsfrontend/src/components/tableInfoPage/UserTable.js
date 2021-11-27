@@ -15,6 +15,30 @@ export default function UserTable({ data }) {
         Header: "Base Price",
         accessor: "basePrice",
       },
+      {
+        Header: "Base Weight",
+        accessor: "baseWeight",
+      },
+      {
+        Header: "Weight Type",
+        accessor: "weightType",
+      },
+      {
+        Header: "Quantity Min",
+        accessor: "quantityMin",
+      },
+      {
+        Header: "Quantity Max",
+        accessor: "quantityMax",
+      },
+      {
+        Header: "Description",
+        accessor: "description",
+      },
+      {
+        Header: "Relative Chance",
+        accessor: "relativeChance",
+      },
     ],
     []
   );

@@ -14,6 +14,12 @@ let fakeUserData = [
         name: "wooden sword",
         id: 1,
         basePrice: "34.5",
+        baseWeight: "20",
+        weightType: "Pounds",
+        quantityMin: "1",
+        quantityMax: "5",
+        description: "A sword made of wood. Not sharp.",
+        relativeChance: "0.3",
       },
       {
         name: "metal sword",
@@ -43,14 +49,24 @@ let fakeUserData = [
 
 export default function EditTablesPage({ userId }) {
   const [tableData, setTableData] = useState(fakeUserData);
+  const [isLoadedSuccessOrErrorMessage, setIsLoadedSuccessOrErrorMessage] =
+    useState("");
 
   return (
     <PageWrapper>
       <h3>Edit/Add Tables</h3>
       <DisplayAndEditTables tableData={tableData} />
       <div className="separaterBottom" />
-      <CreateTable userId={userId} />
-      <AddItems tables={tableData} />
+      <CreateTable
+        userId={userId}
+        isLoadedSuccessOrErrorMessage={isLoadedSuccessOrErrorMessage}
+        setIsLoadedSuccessOrErrorMessage={setIsLoadedSuccessOrErrorMessage}
+      />
+      <AddItems
+        tables={tableData}
+        isLoadedSuccessOrErrorMessage={isLoadedSuccessOrErrorMessage}
+        setIsLoadedSuccessOrErrorMessage={setIsLoadedSuccessOrErrorMessage}
+      />
     </PageWrapper>
   );
 }

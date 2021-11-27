@@ -33,7 +33,7 @@ export default function DisplayAndEditTables({ tableData }) {
 
   return (
     <PageWrapper>
-      <div>
+      <div className="tableWrap">
         <Tables />
       </div>
     </PageWrapper>
@@ -43,5 +43,9 @@ export default function DisplayAndEditTables({ tableData }) {
 const PageWrapper = styled.nav`
   .separaterBottom {
     margin-bottom: 10px;
+  }
+  .tableWrap {
+    display: flex;
+    margin-right: 20px;
   }
 `;

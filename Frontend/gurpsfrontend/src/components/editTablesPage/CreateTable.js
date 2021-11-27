@@ -5,13 +5,18 @@ let starterData = {
   tableName: "",
 };
 
-export default function EditTablesPage({ userId }) {
+export default function EditTablesPage({
+  userId,
+  isLoadedSuccessOrErrorMessage,
+  setIsLoadedSuccessOrErrorMessage,
+}) {
   const [isClicked, setIsClicked] = useState(false);
   const [inputData, setInputData] = useState(starterData);
   const [isLoaded, setIsLoaded] = useState("");
 
   const handleCreateClick = (e) => {
     setIsClicked(true);
+    setIsLoadedSuccessOrErrorMessage("");
   };
 
   const handleInputChange = (e) => {
@@ -48,16 +53,16 @@ export default function EditTablesPage({ userId }) {
           console.log(result);
           //If there was an error fetching the data
           if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
+            setIsLoadedSuccessOrErrorMessage("errorCreatingTable");
             return;
           }
-          setIsLoaded("success");
+          setIsLoadedSuccessOrErrorMessage("successCreatingTable");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
         (error) => {
-          setIsLoaded("error");
+          setIsLoadedSuccessOrErrorMessage("errorCreatingTable");
           //console.log(error);
         }
       );
@@ -87,10 +92,10 @@ export default function EditTablesPage({ userId }) {
           </div>
         </div>
       )}
-      {isLoaded === "error" && (
+      {isLoadedSuccessOrErrorMessage === "errorCreatingTable" && (
         <div className="errorMessage">Something went wrong.</div>
       )}
-      {isLoaded === "success" && (
+      {isLoadedSuccessOrErrorMessage === "successCreatingTable" && (
         <div className="successMessage">
           Successfully created new table. Please refresh the page to view and
           add data.

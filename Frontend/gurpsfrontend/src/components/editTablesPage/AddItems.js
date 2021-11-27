@@ -14,7 +14,11 @@ let starterData = {
   relativeChance: "",
 };
 
-export default function AddItems({ tables }) {
+export default function AddItems({
+  tables,
+  isLoadedSuccessOrErrorMessage,
+  setIsLoadedSuccessOrErrorMessage,
+}) {
   const [tableData, setTableData] = useState("");
   const [addIsClicked, setAddIsClicked] = useState(false);
   const [newItemData, setNewItemData] = useState(starterData);
@@ -44,6 +48,7 @@ export default function AddItems({ tables }) {
   const handleNewItemClick = (e) => {
     e.preventDefault();
     setAddIsClicked(true);
+    setIsLoadedSuccessOrErrorMessage("");
   };
 
   const getIdOfTable = () => {
@@ -120,17 +125,17 @@ export default function AddItems({ tables }) {
           console.log(result);
           //If there was an error fetching the data
           if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("errorAddItem");
+            setIsLoadedSuccessOrErrorMessage("errorAddItem");
             return;
           } else {
-            setIsLoaded("successAddItem");
+            setIsLoadedSuccessOrErrorMessage("successAddItem");
           }
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
         (error) => {
-          setIsLoaded("error");
+          setIsLoadedSuccessOrErrorMessage("error");
           //console.log(error);
         }
       );
@@ -234,10 +239,10 @@ export default function AddItems({ tables }) {
             </form>
           </div>
         )}
-        {isLoaded === "errorAddItem" && (
+        {isLoadedSuccessOrErrorMessage === "errorAddItem" && (
           <div className="errorMessage">Error creating item.</div>
         )}
-        {isLoaded === "successAddItem" && (
+        {isLoadedSuccessOrErrorMessage === "successAddItem" && (
           <div className="successMessage">
             Successfully added item to table.
           </div>

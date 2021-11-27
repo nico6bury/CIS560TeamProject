@@ -83,10 +83,14 @@ export default function TableInfoPage() {
     let toReturn = userTables.map((item) => {
       return (
         <div>
-          <h3>
-            {item.table} - {item.creatingUser}
-          </h3>
-          <UserTable data={item.data} />
+          <div>
+            <b>
+              {item.table} - {item.creatingUser}
+            </b>
+          </div>
+          <div className="tableWrap">
+            <UserTable data={item.data} />
+          </div>
         </div>
       );
     });
@@ -101,4 +105,9 @@ export default function TableInfoPage() {
   );
 }
 
-const PageWrapper = styled.nav``;
+const PageWrapper = styled.nav`
+  .tableWrap {
+    display: flex;
+    margin-right: 20px;
+  }
+`;
