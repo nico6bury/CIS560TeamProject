@@ -98,7 +98,7 @@ namespace GURPSData.Models {
         /// <param name="createdOn"></param>
         public ItemCategory(int itemCategoryID, int owningUserID, string name,
             bool isDefault, DateTime createdOn) {
-            this.ItemCategoryID = ItemCategoryID; this.OwningUserID = owningUserID;
+            this.ItemCategoryID = itemCategoryID; this.OwningUserID = owningUserID;
             this.Name = name; this.IsDefault = isDefault; this.CreatedOn = createdOn;
         }//end constructor
 
@@ -476,7 +476,8 @@ namespace GURPSData.Models {
             string name, int relativeChance, string description, DateTime createdOn) {
             this.EnchantmentCategoryID = enchantmentCategoryID;
             this.OwningUserID = owningUserID; this.Name = name;
-            this.Description = description; this.CreatedOn = createdOn;
+            this.Description = description; this.RelativeChance = relativeChance;
+            this.CreatedOn = createdOn;
         }//end constructor
 
         /// <summary>

@@ -5,11 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataDelegates\" />
     <Folder Include="Sql\Procedures\Create\" />
     <Folder Include="Sql\Procedures\Report\" />
     <Folder Include="Sql\Procedures\Select\" />
     <Folder Include="Sql\Setup\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>

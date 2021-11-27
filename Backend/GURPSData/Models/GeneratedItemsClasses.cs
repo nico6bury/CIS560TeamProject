@@ -202,7 +202,7 @@ namespace GURPSData.Models {
         /// The Cost Factor (CF) of this item, applied to the item which this enchantment is
         /// applied to.
         /// </summary>
-        public int CostFactor { get; }
+        public decimal CostFactor { get; }
         /// <summary>
         /// The Weight Factor for this item, applied to the item which this embellishment is
         /// applied to.
@@ -219,7 +219,7 @@ namespace GURPSData.Models {
         /// <param name="costFactor"></param>
         /// <param name="weightFactor"></param>
         public CreatedEmbellishment(int createdEmbellishmentID, string name, string description,
-            string generatingCategoryName, int costFactor, decimal weightFactor) {
+            string generatingCategoryName, decimal costFactor, decimal weightFactor) {
             this.CreatedEmbellishmentID = createdEmbellishmentID; this.Name = name;
             this.Description = description; this.GeneratingCategoryName = generatingCategoryName;
             this.CostFactor = costFactor; this.WeightFactor = weightFactor;
