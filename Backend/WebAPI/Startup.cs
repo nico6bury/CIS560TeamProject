@@ -14,14 +14,14 @@ namespace WebAPI {
     public class Startup {
         public Startup(IConfiguration configuration) {
             Configuration = configuration;
-        }
+        }//end constructor
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
-        }
+        }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
@@ -36,6 +36,6 @@ namespace WebAPI {
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
             });
-        }
-    }
-}
+        }//end Configure(app, env)
+    }//end class
+}//end namespace
