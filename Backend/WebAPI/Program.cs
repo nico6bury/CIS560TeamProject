@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebAPI {
     public class Program {
-        private IPersonRepository
+        
 
         public static void Main(string[] args) {
             CreateHostBuilder(args).Build().Run();

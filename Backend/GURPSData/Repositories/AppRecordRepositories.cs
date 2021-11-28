@@ -1,7 +1,9 @@
-﻿using GURPSData.Models;
+﻿using DataAccess;
+using GURPSData.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using GURPSData.DataDelegates;
 
 namespace GURPSData.Repositories {
     /// <summary>
@@ -9,12 +11,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class UserRepo : IUserRepo {
+        private readonly SqlCommandExecutor executor;
+        public UserRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public User CreateUser(string username, string password) {
-            throw new NotImplementedException();
+            var d = new CreateUserDataDelegate(username, password);
+            return executor.ExecuteNonQuery(d);
         }//end CreateUser(username, password)
 
         public IReadOnlyList<User> RetrieveAllUsers() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllUsersDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllUsers()
 
         public IReadOnlyList<User> RetrieveUserForID(int userID) {
@@ -26,7 +35,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveUserForUsername(username)
 
         public void SaveUser(int userID, string username, string password) {
-            throw new NotImplementedException();
+            var d = new SaveUserDataDelegate(userID, username, password);
+            executor.ExecuteNonQuery(d);
         }//end SaveUser(userID, username, password)
     }//end class UserRepo
     /// <summary>
@@ -34,12 +44,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class ItemCategoryRepo : IItemCategoryRepo {
+        private readonly SqlCommandExecutor executor;
+        public ItemCategoryRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public ItemCategory CreateItemCategory(int owningUserID, string name) {
-            throw new NotImplementedException();
+            var d = new CreateItemCategoryDataDelegate(owningUserID, name);
+            return executor.ExecuteNonQuery(d);
         }//end CreateItemCategory(owningUserID, name)
 
         public IReadOnlyList<ItemCategory> RetrieveAllItemCategories() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllItemCategoriesDateDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllItemCategories()
 
         public IReadOnlyList<ItemCategory> RetrieveDefaultItemCategories() {
@@ -55,7 +72,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveItemCategoriesForUserID(userID)
 
         public void SaveItemCategory(int itemCategoryID, int owningUserID, string name, string description) {
-            throw new NotImplementedException();
+            var d = new SaveItemCategoryDataDelegate(itemCategoryID, owningUserID, name, description);
+            executor.ExecuteNonQuery(d);
         }//end SaveItemCategory(itemCategoryID, owningUserID, name, description)
     }//end class ItemCategoryRepo
     /// <summary>
@@ -63,12 +81,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class ItemRepo : IItemRepo {
+        private readonly SqlCommandExecutor executor;
+        public ItemRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public Item CreateItem(int itemCategoryID, string name, int unitPrice, int baseWeight, string weightType, int quantityMin, int quantityMax, string description, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new CreateItemDataDelegate(itemCategoryID, name, unitPrice, baseWeight, weightType, quantityMin, quantityMax, description, relativeChance);
+            return executor.ExecuteNonQuery(d);
         }//end CreateItem(int itemCategoryID, string name, int unitPrice, int baseWeight, string weightType, int quantityMin, int quantityMax, string description, int relativeChance)
 
         public IReadOnlyList<Item> RetrieveAllItems() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllItemsDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllItems()
 
         public IReadOnlyList<Item> RetrieveItemsForCategoryID(int categoryID) {
@@ -88,7 +113,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveItemsForUserID(userID)
 
         public void SaveItem(int itemID, string name, string description, int unitPrice, int baseWeight, string weightType, int quantityMin, int quantityMax, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new SaveItemDataDelegate(itemID, name, unitPrice, description, baseWeight, weightType, quantityMin, quantityMax, relativeChance);
+            executor.ExecuteNonQuery(d);
         }//end SaveItem(int itemID, string name, string description, int unitPrice, int baseWeight, string weightType, int quantityMin, int quantityMax, int relativeChance)
     }//end class ItemRepo
     /// <summary>
@@ -96,8 +122,14 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class ItemSubcategoryRepo : IItemSubcategoryRepo {
+        private readonly SqlCommandExecutor executor;
+        public ItemSubcategoryRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public IReadOnlyList<ItemSubcategory> RetrieveAllItemSubcategories() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllItemSubcategoriesDataDelegate();
+            return executor.ExecuteReader(d);
         }// end RetrieveAllItemSubcategories()
 
         public IReadOnlyList<ItemSubcategory> RetrieveItemSubcategoriesForID(int itemSubcategoryID) {
@@ -117,8 +149,14 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class ItemTypeOptionRepo : IItemTypeOptionRepo {
+        private readonly SqlCommandExecutor executor;
+        public ItemTypeOptionRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public IReadOnlyList<ItemTypeOption> RetrieveAllItemTypeOptions() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllItemTypeOptionsDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllItemTypeOptions()
 
         public IReadOnlyList<ItemTypeOption> RetrieveItemTypeOptionsForID(int itemTypeOptionID) {
@@ -134,12 +172,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class EmbellishmentCategoryRepo : IEmbellishmentCategoryRepo {
+        private readonly SqlCommandExecutor executor;
+        public EmbellishmentCategoryRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public EmbellishmentCategory CreateEmbellishmentCategory(int owningUserID, string name, string description, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new CreateEmbellishmentCategoryDataDelegate(owningUserID, name, relativeChance, description);
+            return executor.ExecuteNonQuery(d);
         }//end CreateEmbellishmentCategory(int owningUserID, string name, string description, int relativeChance)
 
         public IReadOnlyList<EmbellishmentCategory> RetrieveAllEmbellishmentCategories() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllEmbellishmentCategoriesDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllEmbellishmentCategories()
 
         public IReadOnlyList<EmbellishmentCategory> RetrieveEmbellishmentCategoriesForID(int embellishmentCategoryID) {
@@ -151,7 +196,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveEmbellishmentCategoriesForUser(int userID)
 
         public void SaveEmbellishmentCategory(int embellishmentCategoryID, int owningUserID, string name, string description, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new SaveEmbellishmentCategoryDataDelegate(embellishmentCategoryID, owningUserID, name, relativeChance, description);
+            executor.ExecuteNonQuery(d);
         }//end SaveEmbellishmentCategory(int embellishmentCategoryID, int owningUserID, string name, string description, int relativeChance)
     }//end class EmbellishmentCategoryRepo
     /// <summary>
@@ -159,12 +205,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class EmbellishmentRepo : IEmbellishmentRepo {
+        private readonly SqlCommandExecutor executor;
+        public EmbellishmentRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public Embellishment CreateEmbellishment(int embellishmentCategoryID, string name, string description, decimal costFactor, decimal weightFactor, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new CreateEmbellishmentDataDelegate(embellishmentCategoryID, name, description, costFactor, weightFactor, relativeChance);
+            return executor.ExecuteNonQuery(d);
         }//end CreateEmbellishment(int embellishmentCategoryID, string name, string description, decimal costFactor, decimal weightFactor, int relativeChance)
 
         public IReadOnlyList<Embellishment> RetrieveAllEmbellishments() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllEmbellishmentsDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllEmbellishments()
 
         public IReadOnlyList<Embellishment> RetrieveEmbellishmentsForCategory(int embellishmentCategoryID) {
@@ -180,7 +233,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveEmbellishmentsForUser(int userID)
 
         public void SaveEmbellishment(int embellishmentID, int embellishmentCategoryID, string name, string description, decimal costFactor, decimal weightFactor, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new SaveEmbellishmentDataDelegate(embellishmentID, embellishmentCategoryID, name, description, costFactor, weightFactor, relativeChance);
+            executor.ExecuteNonQuery(d);
         }//end SaveEmbellishment(int embellishmentID, int embellishmentCategoryID, string name, string description, decimal costFactor, decimal weightFactor, int relativeChance)
     }//end class EmbellishmentRepo
     /// <summary>
@@ -188,12 +242,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class EnchantmentCategoryRepo : IEnchantmentCategoryRepo {
+        private readonly SqlCommandExecutor executor;
+        public EnchantmentCategoryRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public EnchantmentCategory CreateEnchantmentCategory(int owningUserID, string name, string description, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new CreateEnchantmentCategoryDataDelegate(owningUserID, name, relativeChance, description);
+            return executor.ExecuteNonQuery(d);
         }//end CreateEnchantmentCategory(int owningUserID, string name, string description, int relativeChance)
 
         public IReadOnlyList<EnchantmentCategory> RetrieveAllEnchantmentCategories() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllEnchantmentCategoriesDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllEnchantmentCategories()
 
         public IReadOnlyList<EnchantmentCategory> RetrieveEnchantmentCategoriesForID(int enchantmentCategoryID) {
@@ -205,7 +266,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveEnchantmentCategoriesForUser(int userID)
 
         public void SaveEnchantmentCategory(int enchantmentCategoryID, int owningUserID, string name, string description, int relativeChance) {
-            throw new NotImplementedException();
+            var d = new SaveEnchantmentCategoryDataDelegate(enchantmentCategoryID,owningUserID,name,relativeChance,description);
+            executor.ExecuteNonQuery(d);
         }//end SaveEnchantmentCategory(int enchantmentCategoryID, int owningUserID, string name, string description, int relativeChance)
     }//end class EnchantmentCategoryRepo
     /// <summary>
@@ -213,12 +275,19 @@ namespace GURPSData.Repositories {
     /// table in AppRecords schema of database.
     /// </summary>
     public class EnchantmentRepo : IEnchantmentRepo {
+        private readonly SqlCommandExecutor executor;
+        public EnchantmentRepo(string connectionString) {
+            executor = new SqlCommandExecutor(connectionString);
+        }//end constructor
+
         public Enchantment CreateEnchantment(int enchantmentCategoryID, string name, string description, int cost, decimal weightFactor, int relativeChance, string powerReserveType, int powerReserveAmount) {
-            throw new NotImplementedException();
+            var d = new CreateEnchantmentDataDelegate(enchantmentCategoryID, name, description, cost, weightFactor, relativeChance, powerReserveType, powerReserveAmount);
+            return executor.ExecuteNonQuery(d);
         }//end CreateEnchantment(int enchantmentCategoryID, string name, string description, int cost, decimal weightFactor, int relativeChance, string powerReserveType, int powerReserveAmount)
 
         public IReadOnlyList<Enchantment> RetrieveAllEnchantments() {
-            throw new NotImplementedException();
+            var d = new RetrieveAllEnchantmentsDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveAllEnchantments()
 
         public IReadOnlyList<Enchantment> RetrieveEnchantmentsForCategory(int enchantmentCategoryID) {
@@ -234,7 +303,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveEnchantmentsForUser(int userID)
 
         public void SaveEnchantment(int enchantmentID, int enchantmentCategoryID, string name, string description, int cost, decimal weightFactor, int relativeChance, string powerReserveType, int powerReserveAmount) {
-            throw new NotImplementedException();
+            var d = new SaveEnchantmentDataDelegate(enchantmentID, enchantmentCategoryID, name, description, cost, weightFactor, relativeChance, powerReserveType, powerReserveAmount);
+            executor.ExecuteNonQuery(d);
         }//end SaveEnchantment(int enchantmentID, int enchantmentCategoryID, string name, string description, int cost, decimal weightFactor, int relativeChance, string powerReserveType, int powerReserveAmount)
     }//end class EnchantmentRepo
 }//end namespace

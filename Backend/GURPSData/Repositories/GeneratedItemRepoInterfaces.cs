@@ -37,7 +37,7 @@ namespace GURPSData.Repositories {
         IReadOnlyList<InventoryItem> RetrieveInventoryForID(int inventoryID);
 
         InventoryItem CreateInventoryItem(int owningUserID, string name, string description,
-            string generatingCategoryName, int quantity, int unitPrice, int baseWeight);
+            string generatingCategoryName, int quantity, int unitPrice, int baseWeight, string weightType);
 
         void SaveInventoryItem(int inventoryID, int owningUserID, string name, string description,
             string generatingTableName, int quantity, int unitPrice,
