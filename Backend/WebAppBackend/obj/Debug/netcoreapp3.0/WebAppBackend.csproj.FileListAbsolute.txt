@@ -1,37 +1,37 @@
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\appsettings.Development.json
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\appsettings.json
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.exe
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.deps.json
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.runtimeconfig.json
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.runtimeconfig.dev.json
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.Views.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.Views.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.csprojAssemblyReference.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\staticwebassets\WebAppBackend.StaticWebAssets.Manifest.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\staticwebassets\WebAppBackend.StaticWebAssets.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorAssemblyInfo.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorAssemblyInfo.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.AssemblyInfoInputs.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.AssemblyInfo.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.TagHelpers.input.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.TagHelpers.output.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorCoreGenerate.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorTargetAssemblyInfo.cache
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorTargetAssemblyInfo.cs
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.Views.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.csproj.CopyComplete
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\Member.Data.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\Member.Data.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.exe
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.deps.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.runtimeconfig.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.runtimeconfig.dev.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.Views.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\bin\Debug\netcoreapp3.0\WebAppBackend.Views.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.csproj.AssemblyReference.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.AssemblyInfoInputs.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.AssemblyInfo.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.csproj.CoreCompileInputs.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorAssemblyInfo.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorAssemblyInfo.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\staticwebassets\WebAppBackend.StaticWebAssets.Manifest.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\staticwebassets\WebAppBackend.StaticWebAssets.xml
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\scopedcss\bundle\WebAppBackend.styles.css
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.TagHelpers.input.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.TagHelpers.output.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorCoreGenerate.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Privacy.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorTargetAssemblyInfo.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.RazorTargetAssemblyInfo.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.Views.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.genruntimeconfig.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAppBackend\obj\Debug\netcoreapp3.0\WebAppBackend.csproj.CopyComplete

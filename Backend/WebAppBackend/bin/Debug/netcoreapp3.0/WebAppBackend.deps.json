@@ -8,9 +8,15 @@
       "TRACE",
       "DEBUG",
       "NETCOREAPP",
-      "NETCOREAPP3_0"
+      "NETCOREAPP3_0",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER",
+      "NETCOREAPP3_0_OR_GREATER"
     ],
-    "languageVersion": "",
+    "languageVersion": "8.0",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -24,7 +30,6 @@
     ".NETCoreApp,Version=v3.0": {
       "WebAppBackend/1.0.0": {
         "dependencies": {
-          "Member.Data": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -313,14 +318,6 @@
         },
         "compile": {
           "WebAppBackend.dll": {}
-        }
-      },
-      "Member.Data/1.0.0": {
-        "runtime": {
-          "Member.Data.dll": {}
-        },
-        "compile": {
-          "Member.Data.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
@@ -2019,11 +2016,6 @@
   },
   "libraries": {
     "WebAppBackend/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Member.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

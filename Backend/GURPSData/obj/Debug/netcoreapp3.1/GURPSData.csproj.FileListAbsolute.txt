@@ -1,0 +1,12 @@
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.1\GURPSData.deps.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.1\GURPSData.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.1\GURPSData.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.csproj.AssemblyReference.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.AssemblyInfoInputs.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.AssemblyInfo.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.csproj.CoreCompileInputs.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.csproj.CopyComplete
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.1\GURPSData.pdb
