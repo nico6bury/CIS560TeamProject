@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "9qSkUYfNVtHEG2Tyvklnp8oBjaMz/ZqgzSSfel6wqTY7JQm+gXezqe7/LPH00tL2t8zQn0Ds5HYx2DSdw30c6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
