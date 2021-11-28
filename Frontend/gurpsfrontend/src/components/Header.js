@@ -51,7 +51,7 @@ const PageWrapper = styled.nav`
   background: var(--darkPurpleColor);
   border-bottom: 5px solid var(--primaryOrangeColor);
   z-index: 999;
-  width: 100%;
+  /* width: 100%; */
   margin: 0;
   .headerMain {
     display: flex;

@@ -11,6 +11,7 @@ import "./App.css";
 import LoginPage from "./components/loginSignUpPages/LoginPage";
 import SignUpPage from "./components/loginSignUpPages/SignUpPage";
 import EditTablesPage from "./components/editTablesPage/EditTablesPage";
+import StatisticsPage from "./components/statisticsPage/StatisticsPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -100,6 +101,7 @@ function App() {
                   path="/edittables"
                   render={(props) => <EditTablesPage userId={userId} />}
                 />
+                <Route path="/statistics" component={StatisticsPage} />
               </Fragment>
             )}
           </Switch>
@@ -110,7 +112,7 @@ function App() {
 }
 
 const PageWrapper = styled.nav`
-  display: flex;
+  //display: flex;
 
   .contentWrapper {
     display: flex;

@@ -80,6 +80,17 @@ export default function Sidebar({ isLoggedIn }) {
               >
                 Edit/Add Tables
               </Link>
+              <Link
+                to="/statistics"
+                className={
+                  "sidebar-link " +
+                  (currentPage === "statistics" ? "lit" : "unlit")
+                }
+                id="statisticsLink"
+                onClick={() => setCurrentPage("statistics")}
+              >
+                Statistics
+              </Link>
             </div>
           )}
         </li>

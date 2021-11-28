@@ -1,4 +1,5 @@
 -- drop all the tables
+
 DROP TABLE IF EXISTS AppRecords.ItemTypeOption;
 DROP TABLE IF EXISTS AppRecords.ItemSubcategory;
 DROP TABLE IF EXISTS AppRecords.Item;

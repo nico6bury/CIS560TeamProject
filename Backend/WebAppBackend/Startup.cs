@@ -7,6 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Member.Data.Interface;
+using Member.Data.Models;
+using Member.Data.Repository;
 
 namespace WebAppBackend
 {
@@ -23,6 +26,7 @@ namespace WebAppBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddSingleton<IMembers, MembersRepository>();
         }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
