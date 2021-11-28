@@ -1,11 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "DataAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.dll": {}
+        }
+      },
+      "GURPSData/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/GURPSData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GURPSData.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
+    },
+    "GURPSData/1.0.0": {
+      "type": "project",
+      "path": "../GURPSData/GURPSData.csproj",
+      "msbuildProject": "../GURPSData/GURPSData.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "DataAccess >= 1.0.0",
+      "GURPSData >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\nicos\\.nuget\\packages\\": {},
@@ -38,7 +72,14 @@
       "frameworks": {
         "netcoreapp3.0": {
           "targetAlias": "netcoreapp3.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj"
+            },
+            "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj": {
+              "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -89,5 +130,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project GURPSData is not compatible with netcoreapp3.0 (.NETCoreApp,Version=v3.0). Project GURPSData supports: netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "GURPSData",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }
