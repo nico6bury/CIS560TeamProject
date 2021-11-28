@@ -1,0 +1,8 @@
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\bin\Debug\netstandard2.0\Member.Data.deps.json
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\bin\Debug\netstandard2.0\Member.Data.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\bin\Debug\netstandard2.0\Member.Data.pdb
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\obj\Debug\netstandard2.0\Member.Data.csprojAssemblyReference.cache
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\obj\Debug\netstandard2.0\Member.Data.AssemblyInfoInputs.cache
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\obj\Debug\netstandard2.0\Member.Data.AssemblyInfo.cs
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\obj\Debug\netstandard2.0\Member.Data.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\Member.Data\obj\Debug\netstandard2.0\Member.Data.pdb
