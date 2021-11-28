@@ -1,3 +1,76 @@
+-- drop all the procedures we might have lying around
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveAllCreatedEmbellishments;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveCreatedEmbellishmentsForUser;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveCreatedEmbellishmentsForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllUsers;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveUserForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveUserForUsername;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllItemTypeOptions;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemTypeOptionsForItemSubcategoryID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemTypeOptionsForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllItemSubcategories;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemSubcategoriesForItemID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemSubcategoriesForItemCategoryID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemSubcategoriesForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllItems;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemsForName;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemsForCategoryID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemsForUserID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemsForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllItemCategories;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemCategoriesForUserID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveDefaultItemCategories;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveItemCategoriesForID;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveAllInventory;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForUser;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForEnchantment;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForEmbellishment;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForUserAndEnchantment;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForUserAndEmbellishment;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForUserEnchantmentEmbellishment;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveInventoryForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllEnchantments;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEnchantmentsForUser;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEnchantmentsForCategory;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEnchantmentsForID;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveAllEnchantmentRefs;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveEnchantmentRefsForEnchantmentAndItem;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveEnchantmentRefsForUser;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveEnchantmentRefsForItem;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllEnchantmentCategories;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEnchantmentCategoriesForUser;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEnchantmentCategoriesForID;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllEmbellishments;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEmbellishmentsForCategory;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEmbellishmentsForUser;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEmbellishmentsForID;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveAllEmbellishmentRefs;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveEmbellishmentRefsForEmbellishmentAndItem;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveEmbellishmentRefsForUser;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveEmbellishmentRefsForItem;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveAllEmbellishmentCategories;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEmbellishmentCategoriesForUser;
+DROP PROCEDURE IF EXISTS AppRecords.RetrieveEmbellishmentCategoriesForID;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveAllCreatedEnchantments;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveCreatedEnchantmentsForUser;
+DROP PROCEDURE IF EXISTS GeneratedItems.RetrieveCreatedEnchantmentsForID;
+DROP PROCEDURE IF EXISTS AppRecords.CreateEnchantment;
+DROP PROCEDURE IF EXISTS AppRecords.CreateEmbellishmentCategory;
+DROP PROCEDURE IF EXISTS AppRecords.CreateEmbellishment;
+DROP PROCEDURE IF EXISTS GeneratedItems.LinkInventoryEnchant;
+DROP PROCEDURE IF EXISTS GeneratedItems.LinkInventoryEmbellishment;
+DROP PROCEDURE IF EXISTS AppRecords.CreateUser;
+DROP PROCEDURE IF EXISTS AppRecords.CreateItemCategory;
+DROP PROCEDURE IF EXISTS AppRecords.CreateItem;
+DROP PROCEDURE IF EXISTS GeneratedItems.CreateInventoryItem;
+DROP PROCEDURE IF EXISTS GeneratedItems.CreateInventoryEnchantment;
+DROP PROCEDURE IF EXISTS GeneratedItems.CreateInventoryEmbellishment;
+DROP PROCEDURE IF EXISTS AppRecords.CreateEnchantmentCategory;
+DROP PROCEDURE IF EXISTS AppRecords.ItemEnhancementSummary;
+DROP PROCEDURE IF EXISTS AppRecords.ItemCategorySummary;
+DROP PROCEDURE IF EXISTS AppRecords.UserItemSummary;
+DROP PROCEDURE IF EXISTS GeneratedItems.UserInventorySummary
+
 -- drop all the tables
 DROP TABLE IF EXISTS AppRecords.ItemTypeOption;
 DROP TABLE IF EXISTS AppRecords.ItemSubcategory;
@@ -42,6 +115,7 @@ CREATE TABLE AppRecords.ItemCategory(
 		REFERENCES AppRecords.[User](UserID),
 	[Name] NVARCHAR(128) NOT NULL
 		CONSTRAINT UK_ItemCategory_Name UNIQUE,
+	[Description] NVARCHAR(256) NOT NULL,
 	IsDefault BIT NOT NULL
 		CONSTRAINT DF_ItemCategory_IsDefault DEFAULT(0),
 	IsActive BIT NOT NULL

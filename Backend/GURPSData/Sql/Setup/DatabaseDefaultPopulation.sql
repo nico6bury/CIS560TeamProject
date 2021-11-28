@@ -11,8 +11,8 @@ DECLARE @MRItemID INT = 0;
 DECLARE @MRSubCat INT = 0;
 
 -- add to ItemCategory
-INSERT AppRecords.ItemCategory(OwningUserID,[Name],IsDefault)
-VALUES (@AdminID, N'Spices', 1);
+INSERT AppRecords.ItemCategory(OwningUserID,[Name],[Description],IsDefault)
+VALUES (@AdminID, N'Spices', N'A collection of different spices.', 1);
 SET @MRCategoryID = SCOPE_IDENTITY();
 
 -- variables for spice descriptions
