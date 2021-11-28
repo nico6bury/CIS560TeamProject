@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "9qSkUYfNVtHEG2Tyvklnp8oBjaMz/ZqgzSSfel6wqTY7JQm+gXezqe7/LPH00tL2t8zQn0Ds5HYx2DSdw30c6w==",
-  "success": true,
+  "dgSpecHash": "loE7mxLSr34VoVdAab81ngLKNSAV2CIissZuRkIm0mh+xH90meoS9wqaFKcpFsrtOImDP/3i9KOM+ftRi39ZfQ==",
+  "success": false,
   "projectFilePath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
@@ -9,5 +9,15 @@
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project GURPSData is not compatible with netcoreapp3.0 (.NETCoreApp,Version=v3.0). Project GURPSData supports: netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "GURPSData",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }
