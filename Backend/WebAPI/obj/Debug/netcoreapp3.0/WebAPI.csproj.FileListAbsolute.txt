@@ -16,23 +16,3 @@ C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backe
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.pdb
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\appsettings.Development.json
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\appsettings.json
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\WebAPI.exe
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\WebAPI.deps.json
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\WebAPI.runtimeconfig.json
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\WebAPI.runtimeconfig.dev.json
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\WebAPI.dll
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\WebAPI.pdb
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.csproj.AssemblyReference.cache
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.AssemblyInfoInputs.cache
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.AssemblyInfo.cs
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.csproj.CoreCompileInputs.cache
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\staticwebassets\WebAPI.StaticWebAssets.Manifest.cache
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\staticwebassets\WebAPI.StaticWebAssets.xml
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\scopedcss\bundle\WebAPI.styles.css
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.RazorTargetAssemblyInfo.cache
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.dll
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.pdb
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.genruntimeconfig.cache

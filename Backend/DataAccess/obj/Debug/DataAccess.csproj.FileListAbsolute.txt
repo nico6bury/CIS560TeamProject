@@ -2,7 +2,6 @@ C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\D
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\bin\Debug\System.Data.SqlClient.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\bin\Debug\System.Data.SqlClient.xml
-C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.dll
