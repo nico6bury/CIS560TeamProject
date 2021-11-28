@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using GURPSData.Repositories;
 
 namespace WebAPI {
     public class Startup {
@@ -21,6 +22,14 @@ namespace WebAPI {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
+
+            // Add framework services.
+            services.AddMvc();
+
+            services.AddLogging();
+
+            // Add our repository type
+            services.AddSingleton<AppRecordRepoInterfaces, AppRecordRepositories>();
         }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

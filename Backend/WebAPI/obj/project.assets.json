@@ -1,32 +1,66 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "DataAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.dll": {}
+        }
+      },
+      "GURPSData/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/GURPSData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GURPSData.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
+    },
+    "GURPSData/1.0.0": {
+      "type": "project",
+      "path": "../GURPSData/GURPSData.csproj",
+      "msbuildProject": "../GURPSData/GURPSData.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "DataAccess >= 1.0.0",
+      "GURPSData >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\nicos\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\sarah.diener\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\sarah.diener\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sarah.diener\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -37,8 +71,14 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "targetAlias": "netcoreapp3.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj"
+            },
+            "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj": {
+              "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -49,7 +89,6 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
-        "targetAlias": "netcoreapp3.0",
         "imports": [
           "net461",
           "net462",
@@ -60,24 +99,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.0.1, 3.0.1]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.3, 3.0.3]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -86,8 +107,19 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project GURPSData is not compatible with netcoreapp3.0 (.NETCoreApp,Version=v3.0). Project GURPSData supports: netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "GURPSData",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }
