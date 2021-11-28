@@ -11,6 +11,6 @@ ON II.InventoryID = ENR.InventoryID INNER JOIN GeneratedItems.CreatedEmbellishme
 ON EMR.CreatedEmbellishmentID = CEM.CreatedEmbellishmentID INNER JOIN
 GeneratedItems.CreatedEnchantment ON ENR.CreatedEnchantmentID = ENR.CreatedEnchantmentID
 WHERE II.OwningUserID = @UserID
-GROUP BY II.[Name], II.GeneratingTableName, II.UnitPrice, II.BaseWeight;
+GROUP BY II.[Name], II.GeneratingTableName, II.UnitPrice, II.BaseWeight, II.Quantity;
 
 GO

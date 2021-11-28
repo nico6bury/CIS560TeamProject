@@ -9,7 +9,7 @@ CREATE OR ALTER PROCEDURE AppRecords.CreateEmbellishment
 	@CreatedOn DATETIMEOFFSET
 AS
 
-INSERT AppRecords.Embellishment(EmbellishmentCategoryID, [Name], RelativeChance, [Description], CostFactor, WeightFactor, RelativeChance)
+INSERT AppRecords.Embellishment(EmbellishmentCategoryID, [Name], [Description], CostFactor, WeightFactor, RelativeChance)
 VALUES(@EmbellishmentCategoryID,@Name,@Description,@CostFactor,@WeightFactor,@RelativeChance);
 
 SET @EmbellishmentID = SCOPE_IDENTITY();

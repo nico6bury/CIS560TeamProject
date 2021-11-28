@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MPdRz5OmqwXPQIpjBI9j/rQu6Rd6vTsQ9jCHSyXXPstVUwMKFEWFVVGg6AEbN3sPvTeZqjxAOB/ZJED7NDCt3w==",
+  "dgSpecHash": "1VvXzTfPEIk7RqWjQs0F//qeZnNpATGP2NysFycT3E1YilslNjcnlXLQNTb+0SAmcKAjqSm2T+xzRMKtTSPVCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAppBackend\\WebAppBackend.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\nicos\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }
