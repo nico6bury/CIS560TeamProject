@@ -105,9 +105,19 @@ export default function AddItems({
   };
 
   const doAddFetch = () => {
-    //Do userInfo fetch here and set returned values to state
-    fetch("http://localhost:5000", {
-      method: "post",
+    let send = JSON.stringify({
+      CategoryId: addItemTableId,
+      Name: newItemData.name,
+      UnitPrice: newItemData.unitPrice,
+      BaseWeight: newItemData.baseWeight,
+      WeightType: newItemData.weightType,
+      QuantityMin: newItemData.quantityMin,
+      QuantityMax: newItemData.quantityMax,
+      Description: newItemData.description,
+      RelativeChance: newItemData.relativeChance,
+    });
+    fetch(`http://localhost:5000/api/CreateItem/${send}`, {
+      method: "get",
       headers: {
         //"Content-Type": "application/json",
         //"Access-Control-Allow-Credentials": true,

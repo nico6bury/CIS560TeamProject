@@ -14,9 +14,9 @@ import EditTablesPage from "./components/editTablesPage/EditTablesPage";
 import StatisticsPage from "./components/statisticsPage/StatisticsPage";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState("");
   const [isLoaded, setIsLoaded] = useState(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
     //The following is to simulate a call to fetchUserData()
     //setIsLoggedIn(true);
     setIsLoaded("loaded");
-    setUserName("sldiener");
+    //setUserName("");
   }, [isLoggedIn]);
 
   const fetchUserData = () => {
@@ -87,7 +87,13 @@ function App() {
             <Route exact path="/" component={OriginalGeneratorPage} />
             <Route
               path="/login"
-              render={(props) => <LoginPage setIsLoggedIn={setIsLoggedIn} />}
+              render={(props) => (
+                <LoginPage
+                  setIsLoggedIn={setIsLoggedIn}
+                  setUserId={setUserId}
+                  setFinalUserName={setUserName}
+                />
+              )}
             />
             <Route
               path="/signup"
