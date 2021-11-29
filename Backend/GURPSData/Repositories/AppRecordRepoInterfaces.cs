@@ -42,7 +42,7 @@ namespace GURPSData.Repositories {
 
         IReadOnlyList<ItemCategory> RetrieveDefaultItemCategories();
 
-        ItemCategory CreateItemCategory(int owningUserID, string name);
+        ItemCategory CreateItemCategory(int owningUserID, string name, string description);
 
         void SaveItemCategory(int itemCategoryID, int owningUserID, string name, string description);
     }//end interface IItemCategoryRepo

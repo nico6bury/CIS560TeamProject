@@ -44,8 +44,8 @@ namespace GURPSData.Repositories {
     public class ItemCategoryRepo : IItemCategoryRepo {
         private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
 
-        public ItemCategory CreateItemCategory(int owningUserID, string name) {
-            var d = new CreateItemCategoryDataDelegate(owningUserID, name);
+        public ItemCategory CreateItemCategory(int owningUserID, string name, string description) {
+            var d = new CreateItemCategoryDataDelegate(owningUserID, name, description);
             return executor.ExecuteNonQuery(d);
         }//end CreateItemCategory(owningUserID, name)
 

@@ -113,15 +113,20 @@ namespace GURPSData.DataDelegates {
         /// The name of this category of items.
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// A Description of this category of items.
+        /// </summary>
+        public readonly string Description;
 
         /// <summary>
         /// Constructs the CreateItemCategoryDataDelegate class.
         /// </summary>
         /// <param name="owningUserID"></param>
         /// <param name="name"></param>
-        public CreateItemCategoryDataDelegate(int owningUserID, string name)
+        /// <param name="description"></param>
+        public CreateItemCategoryDataDelegate(int owningUserID, string name, string description)
             : base("AppRecords.CreateItemCategory") {
-            this.OwningUserID = owningUserID; this.Name = name;
+            this.OwningUserID = owningUserID; this.Name = name; this.Description = description;
         }//end constructor
 
         /// <summary>
