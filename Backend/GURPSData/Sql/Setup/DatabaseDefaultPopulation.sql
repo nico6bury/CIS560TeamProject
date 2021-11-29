@@ -192,3 +192,101 @@ FROM AppRecords.Item I INNER JOIN AppRecords.ItemSubcategory [IS] ON I.ItemID = 
 	INNER JOIN AppRecords.ItemCategory IC ON IC.ItemCategoryID = [IS].ItemCategoryID LEFT JOIN
 	AppRecords.ItemTypeOption ITO ON ITO.ItemSubCategoryID = [IS].ItemSubcategoryID;
 --*/
+
+-- add to ItemCategory
+INSERT AppRecords.ItemCategory(OwningUserID,[Name],[Description],IsDefault)
+VALUES (@AdminID, N'Cooking', N'A collection of items useful for cooking.', 1);
+SET @MRCategoryID = SCOPE_IDENTITY();
+
+--add Basin
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Basin', 3, 4, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Bowl
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Bowl', 1, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Bucket
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Bucket', 15, 4, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Cauldron
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Cauldron', 180, 20, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Chopsticks
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Chopsticks', 1, 0, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Cup
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Cup', 1, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Dinner Plate
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Dinner Plate', 2, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Drinking Set
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Drinking Set', 7, 3, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Fork, Cooking
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Fork, Cooking', 10, 2, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Fork, Table
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Fork, Table', 3, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Goblet
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Goblet', 5, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Knife, Table
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Knife, Table', 2, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Ladle
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Ladle', 9, 2, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Mortor and Pestle
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Mortor and Pestle', 20, 6, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Pitcher
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Pitcher', 2, 3, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Place Setting
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Place Setting', 5, 2, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Platter
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Platter', 1, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Pot
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Pot', 30, 2, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Skillet
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Skilllet', 50, 8, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Spit, Cooking
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Spit, Cooking', 100, 15, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Tea Set
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Tea Set', 6, 4, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Teapot, Iron
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Teapot, Iron', 45, 7, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
+--add Wine Glass
+INSERT AppRecords.Item([Name],UnitPrice,BaseWeight,WeightType,QuantityMin,QuantityMax,[Description])
+VALUES (N'Wine Glass', 10, 1, N'lbs', 1, 1, N''); SET @MRItemID = SCOPE_IDENTITY()
+INSERT AppRecords.ItemSubcategory(ItemCategoryID,ItemID,[Name]) VALUES (@MRCategoryID, @MRItemID, N'NULL');
