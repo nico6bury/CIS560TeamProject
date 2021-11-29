@@ -28,7 +28,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveUserForID(userID)
 
         public IReadOnlyList<User> RetrieveUserForUsername(string username) {
-            throw new NotImplementedException();
+            var d = new RetrieveUserForUsernameDataDelegate(username);
+            return executor.ExecuteReader(d);
         }//end RetrieveUserForUsername(username)
 
         public void SaveUser(int userID, string username, string password) {
