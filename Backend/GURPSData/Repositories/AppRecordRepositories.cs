@@ -65,7 +65,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveItemCategoriesForID(itemCategoryID)
 
         public IReadOnlyList<ItemCategory> RetrieveItemCategoriesForUserID(int userID) {
-            throw new NotImplementedException();
+            var d = new RetrieveItemCategoriesForUserIDDataDelegate(userID);
+            return executor.ExecuteReader(d);
         }//end RetrieveItemCategoriesForUserID(userID)
 
         public void SaveItemCategory(int itemCategoryID, int owningUserID, string name, string description) {

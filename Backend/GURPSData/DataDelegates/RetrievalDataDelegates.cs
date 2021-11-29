@@ -136,6 +136,28 @@ namespace GURPSData.DataDelegates {
             return categories;
         }//end Translate(command, reader)
     }//end class RetrieveDefaultItemCategoriesDataDelegate
+    public class RetrieveItemCategoriesForUserIDDataDelegate : DataReaderDelegate<IReadOnlyList<ItemCategory>> {
+        public readonly int UserID;
+        public RetrieveItemCategoriesForUserIDDataDelegate(int userID) :
+            base("AppRecords.RetrieveItemCategoriesForUserID") { this.UserID = userID; }
+        public override void PrepareCommand(SqlCommand command) {
+            base.PrepareCommand(command);
+            command.Parameters.AddWithValue("UserID", UserID);
+        }//end PrepareCommand(command)
+        public override IReadOnlyList<ItemCategory> Translate(SqlCommand command, IDataRowReader reader) {
+            var categories = new List<ItemCategory>();
+            while (reader.Read()) {
+                categories.Add(new ItemCategory(
+                    reader.GetInt32("ItemCategoryID"),
+                    reader.GetInt32("OwningUserID"),
+                    reader.GetString("Name"),
+                    reader.GetValue<bool>("IsDefault"),
+                    reader.GetDateTimeOffset("CreatedOn").DateTime
+                    ));
+            }//end looping while we have stuff to read
+            return categories;
+        }//end Translate(command, reader)
+    }//end class RetrieveItemCategoriesForUserIDDataDelegate
 
     public class RetrieveAllItemsDataDelegate : DataReaderDelegate<IReadOnlyList<Item>> {
         public RetrieveAllItemsDataDelegate()
