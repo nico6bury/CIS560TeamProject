@@ -16,20 +16,22 @@ export default function SignUpPage({ setIsLoggedIn }) {
       return;
     }
     //The following will attempt to log the user in
-    //doFetch();
+    doFetch();
 
     //The following is for testing purposes and is to simulate a call to the backend to log the user in
     //setIsLoaded("incorrect");
     history.push("/");
-    setIsLoggedIn(true);
+    //setIsLoggedIn(true);
   };
 
+  //Procedure or function 'CreateUser' expects parameter '@Username', which was not supplied.'
+
   const doFetch = () => {
-    fetch("http://localhost:5000/req/signup", {
+    fetch("http://localhost:5000/api/CreateUser", {
       method: "post",
       headers: {
-        //"Content-Type": "application/json",
-        //"Access-Control-Allow-Credentials": true,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
 
       body: JSON.stringify({
@@ -42,16 +44,18 @@ export default function SignUpPage({ setIsLoggedIn }) {
       .then(
         (result) => {
           console.log(result);
+          setIsLoggedIn(true);
+          setIsLoaded("loaded");
           //If error
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            //return;
-          }
-          //The sign up succeeded! Yay!
-          else {
-            setIsLoggedIn(true);
-            setIsLoaded("loaded");
-          }
+          // if (result.response.apiStatusCode !== "OK") {
+          //   setIsLoaded("error");
+          //   //return;
+          // }
+          // //The sign up succeeded! Yay!
+          // else {
+          //   setIsLoggedIn(true);
+          //   setIsLoaded("loaded");
+          // }
           //The user is logged in
           //setIsLoggedIn(true);
           //console.log(result);
