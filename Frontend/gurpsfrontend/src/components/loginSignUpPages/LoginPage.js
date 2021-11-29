@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react/cjs/react.production.min";
 
-export default function LoginPage({ setIsLoggedIn }) {
+export default function LoginPage({
+  setIsLoggedIn,
+  setUserId,
+  setFinalUserName,
+}) {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [isLoaded, setIsLoaded] = useState("");
@@ -40,7 +43,8 @@ export default function LoginPage({ setIsLoggedIn }) {
           console.log(result);
           if (password === result[0].password) {
             setIsLoggedIn(true);
-            setUserId(result[0].userId);
+            setUserId(result[0].userID);
+            setFinalUserName(username);
           } else {
             setIsLoggedIn(false);
             setIsLoaded("incorrect");

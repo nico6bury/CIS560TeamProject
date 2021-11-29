@@ -22,20 +22,22 @@ export default function EditTablesPage({
   const handleInputChange = (e) => {
     setInputData({
       ...inputData,
-      [e.target.name]: e.target.value,
+      tableName: e.target.value,
     });
+    //console.log(inputData.tableName);
   };
 
   const handleSubmitClick = (e) => {
     setIsClicked(false);
-    //doFetch();
-    setIsLoaded("success");
+    doFetch();
+    //setIsLoaded("success");
   };
 
   const doFetch = () => {
+    console.log(inputData.tableName + userId);
     let send = JSON.stringify({
-      userId: userId,
-      name: inputData.tableName,
+      OwningUserID: userId,
+      Name: inputData.tableName,
     });
     //Do userInfo fetch here and set returned values to state
     fetch(`http://localhost:5000/api/CreateCategory/${send}`, {
@@ -51,6 +53,7 @@ export default function EditTablesPage({
         (result) => {
           console.log(result);
           setIsLoadedSuccessOrErrorMessage("successCreatingTable");
+          setIsLoaded("success");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow

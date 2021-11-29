@@ -23,8 +23,8 @@ namespace WebAPI.Controllers {
 
         [HttpGet("json")]
         public Item CreateItemGet(string json) {
-            Item i = JsonConvert.DeserializeObject<Item>(json);
-            return Items.CreateItem(i.ItemID, i.Name, i.UnitPrice, i.BaseWeight, i.WeightType, i.QuantityMin, i.QuantityMax, i.Description, i.RelativeChance);
+            dynamic i = JsonConvert.DeserializeObject<dynamic>(json);
+            return Items.CreateItem(i.CategoryId, i.Name, i.UnitPrice, i.BaseWeight, i.WeightType, i.QuantityMin, i.QuantityMax, i.Description, i.RelativeChance);
         }
 
 

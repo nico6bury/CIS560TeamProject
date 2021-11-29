@@ -24,8 +24,8 @@ namespace WebAPI.Controllers {
 
         [HttpGet("{json}")]
         public ItemCategory CreateCategoryGet(string json) {
-            ItemCategory ic = JsonConvert.DeserializeObject<ItemCategory>(json);
-            return ICs.CreateItemCategory(ic.OwningUserID, ic.Name);
+            dynamic ic = JsonConvert.DeserializeObject<dynamic>(json);
+            return ICs.CreateItemCategory(ic.OwningUserID, ic.Name.ToString());
         }
 
         
