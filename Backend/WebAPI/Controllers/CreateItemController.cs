@@ -11,9 +11,9 @@ using Newtonsoft.Json;
 
 namespace WebAPI.Controllers {
     [Route("api/[controller]")]
-    public class CreateItem : Controller {
+    public class CreateItemController : Controller {
 
-        public CreateItem(IItemRepo items) {
+        public CreateItemController(IItemRepo items) {
             Items = items;
         }
         public IItemRepo Items { get; set; }
@@ -21,7 +21,7 @@ namespace WebAPI.Controllers {
         // GET: api/<controller>
 
 
-        [HttpGet("json")]
+        [HttpGet("{json}")]
         public Item CreateItemGet(string json) {
             dynamic i = JsonConvert.DeserializeObject<dynamic>(json);
             return Items.CreateItem(i.CategoryId, i.Name, i.UnitPrice, i.BaseWeight, i.WeightType, i.QuantityMin, i.QuantityMax, i.Description, i.RelativeChance);
