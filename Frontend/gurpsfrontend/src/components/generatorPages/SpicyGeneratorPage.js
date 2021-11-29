@@ -120,7 +120,7 @@ export default function SpicyGeneratorPage() {
           spicyData={itemCategoryUDData}
         />
         <div className="spacer1" />
-        <Filters
+        {/* <Filters
           itemCategoryData={itemCategoryData}
           setItemCategoryData={setItemCategoryData}
           extrasData={extrasData}
@@ -128,7 +128,7 @@ export default function SpicyGeneratorPage() {
           isSpicy={true}
           userTables={itemCategoryUDData}
           setUserTables={setItemCategoryUDData}
-        ></Filters>
+        ></Filters> */}
       </div>
     </PageWrapper>
   );

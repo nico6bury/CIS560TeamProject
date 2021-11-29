@@ -18,7 +18,7 @@ export default function StatisticsPage({ userId }) {
   }, []);
 
   const doFetch = () => {
-    fetch("http://localhost:5000", {
+    fetch("http://localhost:5000/api/GetUserInventorySummary", {
       method: "post",
       headers: {
         //"Content-Type": "application/json",
@@ -35,10 +35,6 @@ export default function StatisticsPage({ userId }) {
         (result) => {
           console.log(result);
           //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            return;
-          }
           setJoinedOn(result.joinedOn);
           setNumberOfTables(result.numberOfTables);
           setNumberOfItems(result.numberOfItems);

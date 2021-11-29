@@ -55,7 +55,7 @@ export default function EditTablesPage({ userId }) {
   return (
     <PageWrapper>
       <h3>Edit/Add Tables</h3>
-      <DisplayAndEditTables tableData={tableData} />
+      {/* <DisplayAndEditTables tableData={tableData} /> */}
       <div className="separaterBottom" />
       <CreateTable
         userId={userId}
