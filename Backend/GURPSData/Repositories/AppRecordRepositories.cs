@@ -16,6 +16,10 @@ namespace GURPSData.Repositories {
             executor = new SqlCommandExecutor(connectionString);
         }//end constructor
 
+        public UserRepo() {
+            executor = new SqlCommandExecutor(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560GroupDatabase;Integrated Security=SSPI;");
+        }
+
         public User CreateUser(string username, string password) {
             var d = new CreateUserDataDelegate(username, password);
             return executor.ExecuteNonQuery(d);

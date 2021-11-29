@@ -29,7 +29,7 @@ namespace WebAPI {
             services.AddLogging();
 
             // Add our repository type
-            services.AddSingleton<AppRecordRepoInterfaces, AppRecordRepositories>();
+            services.AddSingleton<IUserRepo, UserRepo>();
         }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

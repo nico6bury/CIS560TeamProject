@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using GURPSData.Repositories.AppRecordRepoInterfaces;
-using GURPSData.Models.AppRecordClasses;
+using GURPSData.Repositories;
+using GURPSData.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,15 +25,17 @@ namespace WebAPI.Controllers {
             return Users.RetrieveAllUsers();
         }
 
-        [HttpPost]
-        public IReadOnlyList<User> RetrieveAllUsers() {
-            return Users.RetrieveAllUsers();
-        }
+        //[HttpGet]
+        //public List<string> GetSomething() {
+        //    List<string> gs = new List<string>();
+        //    gs.Add("hello");
+        //    gs.Add("there");
+        //    return gs;
+        //}
 
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id) {
-            return "value";
+        [HttpPost]
+        public IReadOnlyList<User> RetrieveAllUsers([FromBody] string item) {
+            return Users.RetrieveAllUsers();
         }
 
         
