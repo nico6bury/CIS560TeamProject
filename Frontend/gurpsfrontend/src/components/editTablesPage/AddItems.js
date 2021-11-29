@@ -123,11 +123,6 @@ export default function AddItems({
         //"Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
-      body: JSON.stringify({
-        requestType: "sendAddNewItem",
-        addToTable: addItemTableId,
-        data: newItemData,
-      }),
     })
       .then((res) => res.json())
       .then(
