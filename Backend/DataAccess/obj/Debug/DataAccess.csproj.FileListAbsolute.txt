@@ -10,7 +10,6 @@ C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backe
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Data.SqlClient.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Data.SqlClient.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.pdb

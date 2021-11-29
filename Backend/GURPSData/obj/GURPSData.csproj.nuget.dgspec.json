@@ -1,49 +1,49 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj": {}
+    "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj"
+        "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj": {
+    "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj",
+        "projectUniqueName": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj",
         "projectName": "GURPSData",
-        "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj",
-        "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\obj\\",
+        "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj",
+        "packagesPath": "C:\\Users\\sarah.diener\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sarah.diener\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -55,8 +55,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "netcoreapp3.0": {
           "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
@@ -78,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
