@@ -58,7 +58,7 @@ export default function Sidebar({ isLoggedIn }) {
               >
                 Spicy Generator
               </Link> */}
-              <Link
+              {/* <Link
                 to="/tableinfo"
                 className={
                   "sidebar-link " +
@@ -68,7 +68,7 @@ export default function Sidebar({ isLoggedIn }) {
                 onClick={() => setCurrentPage("tableinfo")}
               >
                 Table Info
-              </Link>
+              </Link> */}
               <Link
                 to="/edittables"
                 className={

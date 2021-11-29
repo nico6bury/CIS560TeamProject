@@ -16,7 +16,7 @@ import StatisticsPage from "./components/statisticsPage/StatisticsPage";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState(2);
   const [isLoaded, setIsLoaded] = useState(null);
 
   useEffect(() => {

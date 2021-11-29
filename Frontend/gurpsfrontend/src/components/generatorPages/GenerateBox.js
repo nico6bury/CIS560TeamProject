@@ -28,7 +28,7 @@ export default function GenerateBox({
   const [nextGenerated, setNextGenerated] = useState("");
   const [counter, setCounter] = useState(0);
   const [isLoaded, setIsLoaded] = useState("");
-  const [randResult, setRandResult] = useState("");
+  const [randResult, setRandResult] = useState([]);
   const [numberGenerate, setNumberGenerate] = useState(1);
 
   const handleClick = (e) => {
@@ -94,15 +94,19 @@ export default function GenerateBox({
     () => [
       {
         Header: "Item",
-        accessor: "item",
+        accessor: "name",
       },
       {
-        Header: "Embelishments",
-        accessor: "embelishments",
+        Header: "Weight",
+        accessor: "baseWeight",
+      },
+      {
+        Header: "Weight Type",
+        accessor: "weightType",
       },
       {
         Header: "Price",
-        accessor: "price",
+        accessor: "unitPrice",
       },
     ],
     []
@@ -112,7 +116,7 @@ export default function GenerateBox({
     useTable(
       {
         columns,
-        data: fakeData,
+        data: randResult,
       },
       useSortBy
     );

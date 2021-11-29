@@ -21,10 +21,14 @@ namespace WebAPI.Controllers {
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public (ISet<string>, IList<int>, IList<int>, int) Get(string id) {
+        public List<Item> Get(string id) {
             NewItemGenerator ic = JsonConvert.DeserializeObject<NewItemGenerator>(id);
-            return Statics.GenerateRandomItemsForUser(Is, INs, ICs, ic.NumItems, -2, ic.UserId);
- 
+            IList<int> list = Statics.GenerateRandomItemsForUser(Is, INs, ICs, ic.NumItems, -2, ic.UserId).Item2;
+            List<Item> toReturn = new List<Item>();
+            foreach(int i in list) {
+                toReturn.Add(Is.RetrieveItemsForID(i)[0]);   
+            }
+            return (toReturn);
         }
 
         public IItemCategoryRepo ICs { get; set; } = new ItemCategoryRepo();
