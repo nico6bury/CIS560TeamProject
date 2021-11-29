@@ -24,12 +24,22 @@ namespace WebAPI.Controllers {
 
         [HttpGet("{json}")]
         public ItemCategory CreateCategoryGet(string json) {
-            dynamic ic = JsonConvert.DeserializeObject<dynamic>(json);
-            return ICs.CreateItemCategory(ic.OwningUserID, ic.Name.ToString());
+            NewItemCategory ic = JsonConvert.DeserializeObject<NewItemCategory>(json);
+            return ICs.CreateItemCategory(ic.OwningUserID, ic.Name);
         }
 
+    }
+
+        class NewItemCategory{
+
+            public NewItemCategory(int oui, string name) {
+            OwningUserID = oui;
+            Name = name;
+        }
+            public int OwningUserID { get; set; }
+            public string Name { get; set; }
+        }
         
 
 
-    }
 }
