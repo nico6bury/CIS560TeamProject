@@ -11,9 +11,9 @@ using Newtonsoft.Json;
 
 namespace WebAPI.Controllers {
     [Route("api/[controller]")]
-    public class CreateItemController : Controller {
+    public class CreateItem : Controller {
 
-        public CreateItemController(IItemRepo items) {
+        public CreateItem(IItemRepo items) {
             Items = items;
         }
         public IItemRepo Items { get; set; }
