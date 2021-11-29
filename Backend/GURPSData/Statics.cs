@@ -142,9 +142,15 @@ namespace GURPSData {
                     "As such, we can't generate anything.");
             }//end if there are no items to generate
 
+            // create version of generation bool with objects
+            IList<object> genericGenPool = new List<object>();
+            foreach(Item item in generationPool) {
+                genericGenPool.Add((object)item);
+            }//end looping over generation pool
+
             // do stuff for each generation
             for(int i = 0; i < numItems; i++) {
-                var resTup = ChooseChanceItem((IList<object>)generationPool);
+                var resTup = ChooseChanceItem(genericGenPool);
                 if(resTup.Item2 != null) {
                     Item gend = resTup.Item2 as Item;
 
