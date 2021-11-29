@@ -61,7 +61,9 @@ namespace GURPSData.DataDelegates {
             { this.Username = username; }
         public override void PrepareCommand(SqlCommand command) {
             base.PrepareCommand(command);
-            command.Parameters.AddWithValue("@Username", Username);
+            //command.Parameters.AddWithValue("Username", Username);
+            var p = command.Parameters.Add("Username", System.Data.SqlDbType.NVarChar);
+            p.Value = Username;
         }//end PrepareCommand(command)
         public override IReadOnlyList<User> Translate(SqlCommand command, IDataRowReader reader) {
             var users = new List<User>();
