@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Reflection;
+using GURPSData.Repositories;
 
 namespace GURPSData {
     public static class Statics {
@@ -70,5 +71,43 @@ namespace GURPSData {
             // base case of sorts just in case something fails somehow
             return (-1, null);
         }//end ChooseChanceItem(objects)
+
+        /// <summary>
+        /// Randomly selects items from the selected pool of available items,
+        /// creates summary statistics about those items, and then adds
+        /// inventory versions to the database.
+        /// </summary>
+        /// <param name="itemRepo">The ItemRepo object we should use to access
+        /// item records in the database.</param>
+        /// <param name="inventoryRepo">The InventoryRepo object we should use
+        /// to access inventory records in the database.</param>
+        /// <param name="numItems">The number of items to generate.</param>
+        /// <param name="itemCategoryID">The ID of the Item Category table to pull
+        /// items from. This parameter also has special values. If this is set
+        /// to -1, then we'll pull from all item categories owned by the user.
+        /// If this is -2, then we'll allow ourselves to pull from any category
+        /// at all.</param>
+        /// <param name="userID">The user who is generating items. GeneratedItems will
+        /// be placed in their inventory automatically.</param>
+        /// <returns>This method returns a relatively complicated tuple. Here's
+        /// an explanation of each part: <para />
+        /// Item1: Set of names of each item generated. <para />
+        /// Item2: List of itemIDs from items generated from. <para />
+        /// Item3: List of inventoryIDs of items generated. <para />
+        /// Item4: Total cost of all items generated. This takes quantity
+        /// for individual items into account.</returns>
+        public static (ISet<string>, IList<int>, IList<int>, int)
+            GenerateRandomItemsForUser(ItemRepo itemRepo, InventoryRepo inventoryRepo,
+            uint numItems, int itemCategoryID, int userID) {
+            // setup some variables to get returned
+            ISet<string> itemNames = new HashSet<string>();
+            IList<int> itemIDs = new List<int>();
+            IList<int> inventoryIDs = new List<int>();
+            int totalCost = 0;
+
+            // do stuff for each generation
+
+            return (itemNames, itemIDs, inventoryIDs, totalCost);
+        }//end GenerateRandomItemsForUser(itemRepo,inventoryRepo,numItems,itemCategoryID,userID)
     }//end class
 }//end namespace
