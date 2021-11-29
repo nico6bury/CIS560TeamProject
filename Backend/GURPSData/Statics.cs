@@ -4,6 +4,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Reflection;
 using GURPSData.Repositories;
+using GURPSData.Models;
 
 namespace GURPSData {
     public static class Statics {
@@ -81,6 +82,8 @@ namespace GURPSData {
         /// item records in the database.</param>
         /// <param name="inventoryRepo">The InventoryRepo object we should use
         /// to access inventory records in the database.</param>
+        /// <param name="itemCategoryRepo">The ItemCategoryRepo object that we
+        /// should use to access item category records in the database</param>
         /// <param name="numItems">The number of items to generate.</param>
         /// <param name="itemCategoryID">The ID of the Item Category table to pull
         /// items from. This parameter also has special values. If this is set
@@ -96,8 +99,18 @@ namespace GURPSData {
         /// Item3: List of inventoryIDs of items generated. <para />
         /// Item4: Total cost of all items generated. This takes quantity
         /// for individual items into account.</returns>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <remarks>Exception explanation:<para />
+        /// ArgumentException: Generated when <paramref name="itemCategoryID"/> is either
+        /// 0 or less than -2.<para />
+        /// InvalidOperationException: Generated when the pool of available items
+        /// (base on <paramref name="itemCategoryID"/>) is filtered to the point
+        /// that there are no items for us to pick from. Ie, we look for items in
+        /// a particular category, and there's nothing there, or something similar.</remarks>
         public static (ISet<string>, IList<int>, IList<int>, int)
             GenerateRandomItemsForUser(ItemRepo itemRepo, InventoryRepo inventoryRepo,
+            ItemCategoryRepo itemCategoryRepo,
             uint numItems, int itemCategoryID, int userID) {
             // setup some variables to get returned
             ISet<string> itemNames = new HashSet<string>();
@@ -105,7 +118,58 @@ namespace GURPSData {
             IList<int> inventoryIDs = new List<int>();
             int totalCost = 0;
 
+            IList<Item> generationPool = new List<Item>();
+            // get a list of the items we're allowed to generated from
+            if(itemCategoryID < -2 || itemCategoryID == 0) {
+                throw new ArgumentException("Sorry, but it seems you entered {itemCategoryID} " +
+                    "for {nameof(itemCategoryID)} in the {nameof(GeneratedRandomItemsForUser)} method in the " +
+                    "{nameof(Statics)} class. This value should be -2, -1, or a value 1 or highter.");
+            }//end if we have a problem with itemCategory
+            else if(itemCategoryID == -2) {
+                generationPool = (IList<Item>)itemRepo.RetrieveAllItems();
+            }//end if we're doing all categories
+            else if(itemCategoryID == -1) {
+                generationPool = (IList<Item>)itemRepo.RetrieveItemsForUserID(userID);
+            }//end if we're doing all of {userID}'s categories
+            else {
+                generationPool = (IList<Item>)itemRepo.RetrieveItemsForCategoryID(itemCategoryID);
+            }//end else we're just doing one category
+
+            // make sure we actually have stuff to generate
+            if(generationPool.Count <= 0) {
+                throw new InvalidOperationException("Sorry, but following method " +
+                    "protocol has resulted in an item pool without any items in it. " +
+                    "As such, we can't generate anything.");
+            }//end if there are no items to generate
+
             // do stuff for each generation
+            for(int i = 0; i < numItems; i++) {
+                var resTup = ChooseChanceItem((IList<object>)generationPool);
+                if(resTup.Item2 != null) {
+                    Item gend = resTup.Item2 as Item;
+
+                    // add what we can to our outputs
+                    itemNames.Add(gend.Name);
+                    itemIDs.Add(gend.ItemID);
+
+                    int gennedQuantity = R.Next(gend.QuantityMin, gend.QuantityMax + 1);
+
+                    totalCost += (gennedQuantity * gend.UnitPrice);
+
+                    // following chunk slightly broken/wrong for some inputs, I know
+                    IReadOnlyList<ItemCategory> ecfrrfrid = itemCategoryRepo
+                        .RetrieveItemCategoriesForID(itemCategoryID);
+                    string catName = "MissingCategoryName";
+                    if (ecfrrfrid.Count > 0) catName = ecfrrfrid[0].Name;
+
+                    // add item(s) to inventory of user
+                    InventoryItem invIt = inventoryRepo.CreateInventoryItem(userID, gend.Name, gend.Description,
+                        catName,
+                        gennedQuantity, gend.UnitPrice, gend.BaseWeight, gend.WeightType);
+
+                    inventoryIDs.Add(invIt.InventoryID);
+                }//end if we didn't generate something {null}
+            }//end looping {numItems} times
 
             return (itemNames, itemIDs, inventoryIDs, totalCost);
         }//end GenerateRandomItemsForUser(itemRepo,inventoryRepo,numItems,itemCategoryID,userID)

@@ -55,11 +55,13 @@ namespace GURPSData.Repositories {
         }//end RetrieveAllItemCategories()
 
         public IReadOnlyList<ItemCategory> RetrieveDefaultItemCategories() {
-            throw new NotImplementedException();
+            var d = new RetrieveDefaultItemCategoriesDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveDefaultItemCategories()
 
         public IReadOnlyList<ItemCategory> RetrieveItemCategoriesForID(int itemCatgoryID) {
-            throw new NotImplementedException();
+            var d = new RetrieveItemCategoriesForIDDataDelegate(itemCatgoryID);
+            return executor.ExecuteReader(d);
         }//end RetrieveItemCategoriesForID(itemCategoryID)
 
         public IReadOnlyList<ItemCategory> RetrieveItemCategoriesForUserID(int userID) {
