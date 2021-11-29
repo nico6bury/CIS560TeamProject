@@ -30,6 +30,7 @@ namespace WebAPI {
 
             // Add our repository type
             services.AddSingleton<IUserRepo, UserRepo>();
+            services.AddSingleton<IItemCategoryRepo, ItemCategoryRepo>();
         }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
