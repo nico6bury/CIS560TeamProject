@@ -23,11 +23,18 @@ namespace WebAPI.Controllers {
         [HttpGet("{id}")]
         public List<Item> Get(string id) {
             NewItemGenerator ic = JsonConvert.DeserializeObject<NewItemGenerator>(id);
-            IList<int> list = Statics.GenerateRandomItemsForUser(Is, INs, ICs, ic.NumItems, -2, ic.UserId).Item2;
             List<Item> toReturn = new List<Item>();
-            foreach(int i in list) {
-                toReturn.Add(Is.RetrieveItemsForID(i)[0]);   
+            try {
+                IList<int> list = Statics.GenerateRandomItemsForUser(Is, INs, ICs, ic.NumItems, ic.TypeGenerate, ic.UserId).Item2;
+                toReturn = new List<Item>();
+                foreach (int i in list) {
+                    toReturn.Add(Is.RetrieveItemsForID(i)[0]);
+                }
+            }//end try
+            catch (Exception e) {
+                Console.WriteLine(e);
             }
+            
             return (toReturn);
         }
 
@@ -39,12 +46,15 @@ namespace WebAPI.Controllers {
     }
 
     class NewItemGenerator {
-        public NewItemGenerator(uint ni, int uid) {
+        public NewItemGenerator(uint ni, int uid, int typegen) {
             NumItems = ni;
             UserId = uid;
+            TypeGenerate = typegen;
         }
-        public uint NumItems {get;set;}
-         public int UserId {get;set;}
+        public uint NumItems { get; set; }
+        public int UserId { get; set; }
+
+        public int TypeGenerate{get;set;}
     }
 
 }

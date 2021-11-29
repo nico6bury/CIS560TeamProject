@@ -23,11 +23,35 @@ namespace WebAPI.Controllers {
 
         [HttpGet("{json}")]
         public Item CreateItemGet(string json) {
-            dynamic i = JsonConvert.DeserializeObject<dynamic>(json);
+            NewItem i = JsonConvert.DeserializeObject<NewItem>(json);
             return Items.CreateItem(i.CategoryId, i.Name, i.UnitPrice, i.BaseWeight, i.WeightType, i.QuantityMin, i.QuantityMax, i.Description, i.RelativeChance);
         }
 
 
 
+    }//end class
+
+    class NewItem {
+        public NewItem(int catId, string name, int unitPrice, int baseW, string weightT, int quanMin, int quanMax, string desc, int relChance) {
+            CategoryId = catId;
+            Name = name;
+            UnitPrice = unitPrice;
+            BaseWeight = baseW;
+            WeightType = weightT;
+            QuantityMin = quanMin;
+            QuantityMax = quanMax;
+            Description = Description;
+            RelativeChance = relChance;
+        }
+
+        public int CategoryId { get; set; }
+        public string Name { get; set; }
+        public int UnitPrice { get; set; }
+        public int BaseWeight { get; set; }
+        public string WeightType { get; set; }
+        public int QuantityMin { get; set; }
+        public int QuantityMax { get; set; }
+        public string Description { get; set; }
+        public int RelativeChance { get; set; }
     }
 }

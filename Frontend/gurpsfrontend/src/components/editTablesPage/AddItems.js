@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CreateTable from "./CreateTable";
 import DisplayAndEditTables from "./DisplayAndEditTables";
 
-let starterData = {
+let starterData = Object.freeze({
   name: "",
   unitPrice: "",
   baseWeight: "",
@@ -12,7 +12,7 @@ let starterData = {
   quantityMax: "",
   description: "",
   relativeChance: "",
-};
+});
 
 export default function AddItems({
   tables,
@@ -35,8 +35,8 @@ export default function AddItems({
     let finishedArray = [];
     tables.map((item) => {
       let curItem = {
-        name: item.table,
-        id: item.id,
+        tableName: item.tableName,
+        tableId: item.tableId,
         checked: false,
       };
       //console.log(curItem.name);
@@ -62,27 +62,27 @@ export default function AddItems({
 
   const TablesCheckboxes = () => {
     // setState(s => ({ ...s, [target.name]:!s[target.name]}));
-
+    console.log(tableData);
     let checkboxes = tableData.map((item, idx) => {
       let chkstr = "";
-      //console.log("ITEM: " + item.name);
+      console.log("ITEM: " + item.tableName + " " + item.tableId);
       return (
         <div className="checkboxes">
           <input
             type="radio"
             //onClick={(e) => handleToggle(e, idx)}
             //onChange={handleChange}
-            key={item.id}
-            id={item.id}
+            key={item.tableId}
+            id={item.tableId}
             name={"tableRadioOptions"}
-            value={item.name}
+            value={item.tableName}
             //checked={tableValue}
             //onChange={(e) => handleToggle(e, idx)}
             className="checkboxes"
             //readOnly={true}
           />
-          <label className="checkboxes" for={item.id}>
-            {item.name}
+          <label className="checkboxes" for={item.tableId}>
+            {item.tableName}
           </label>
         </div>
       );
@@ -101,10 +101,31 @@ export default function AddItems({
     e.preventDefault();
     //console.log(e.target);
     setGoIsClicked(false);
-    //doAddFetch();
+    getIdOfTable();
+    doAddFetch();
   };
 
   const doAddFetch = () => {
+    console.log(
+      "CategoryId" +
+        addItemTableId +
+        "Name" +
+        newItemData.name +
+        "UnitPrice" +
+        newItemData.unitPrice +
+        "BaseWeight" +
+        newItemData.baseWeight +
+        "WeightType" +
+        newItemData.weightType +
+        "QuantityMin" +
+        newItemData.quantityMin +
+        "QuantityMax" +
+        newItemData.quantityMax +
+        "Description" +
+        newItemData.description +
+        "RelativeChance" +
+        newItemData.relativeChance
+    );
     let send = JSON.stringify({
       CategoryId: addItemTableId,
       Name: newItemData.name,
@@ -128,13 +149,7 @@ export default function AddItems({
       .then(
         (result) => {
           console.log(result);
-          //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoadedSuccessOrErrorMessage("errorAddItem");
-            return;
-          } else {
-            setIsLoadedSuccessOrErrorMessage("successAddItem");
-          }
+          setIsLoadedSuccessOrErrorMessage("successAddItem");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -176,7 +191,7 @@ export default function AddItems({
             <form className="addNewItemForm">
               <input
                 className="formInput separaterBottom2"
-                name="itemNameInput"
+                name="itemName"
                 placeholder="Item Name"
                 size="12"
                 maxLength={20}
@@ -184,7 +199,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="unitPriceInput"
+                name="unitPrice"
                 placeholder="Item Unit Price"
                 size="12"
                 maxLength={20}
@@ -192,7 +207,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="baseWeightInput"
+                name="baseWeight"
                 placeholder="Item Base Weight"
                 size="12"
                 maxLength={20}
@@ -200,7 +215,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="weightTypeInput"
+                name="weightType"
                 placeholder="Item Weight Type"
                 size="12"
                 maxLength={20}
@@ -208,7 +223,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="quantityMinInput"
+                name="quantityMin"
                 placeholder="Item Quantity Min"
                 size="12"
                 maxLength={20}
@@ -216,7 +231,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="quantityMaxInput"
+                name="quantityMax"
                 placeholder="Item Quantity Max"
                 size="12"
                 maxLength={20}
@@ -224,7 +239,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="descriptionInput"
+                name="description"
                 placeholder="Item Description"
                 size="20"
                 maxLength={20}
@@ -232,7 +247,7 @@ export default function AddItems({
               />
               <input
                 className="formInput separaterBottom2"
-                name="relativeChanceInput"
+                name="relativeChance"
                 placeholder="Item Relative Chance"
                 size="20"
                 maxLength={20}

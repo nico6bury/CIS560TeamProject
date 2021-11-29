@@ -21,7 +21,7 @@ export default function DisplayAndEditTables({ tableData }) {
       return (
         <div>
           <div>
-            <b>{item.table}</b>
+            <b>{item.tableName}</b>
           </div>
           <UserTable data={item.data} />
           <div className="separaterBottom" />

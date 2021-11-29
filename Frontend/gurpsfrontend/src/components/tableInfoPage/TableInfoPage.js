@@ -37,33 +37,34 @@ let fakeUserData = [
   },
 ];
 
-export default function TableInfoPage() {
+export default function TableInfoPage({ userId }) {
   const [userTables, setUserTables] = useState(fakeUserData);
   const [isLoaded, setIsLoaded] = useState("");
 
   useEffect(() => {
-    //doFetch();
+    doFetch();
   }, []);
 
   const doFetch = () => {
-    fetch("http://localhost:5000/api/RetrieveAllItems", {
-      method: "post",
+    //console.log(inputData.tableName + userId);
+    let send = JSON.stringify({
+      UserId: userId,
+    });
+    //Do userInfo fetch here and set returned values to state
+    fetch(`http://localhost:5000/api/RetrieveAllItemsInTablesAll/${send}`, {
+      method: "get",
       headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": true,
+        //"Content-Type": "application/json",
+        //"Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
-      body: JSON.stringify({
-        username: "getUserDefinedTables",
-      }),
     })
       .then((res) => res.json())
       .then(
         (result) => {
           console.log(result);
-          //If there was an error fetching the data
           setUserTables(result);
-          setIsLoaded("loaded");
+          setIsLoaded("success");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -81,7 +82,7 @@ export default function TableInfoPage() {
         <div>
           <div>
             <b>
-              {item.table} - {item.creatingUser}
+              {item.tableName} - {item.userName}
             </b>
           </div>
           <div className="tableWrap">
@@ -95,7 +96,7 @@ export default function TableInfoPage() {
 
   return (
     <PageWrapper>
-      <h1>User-Defined Tables</h1>
+      <h1>All Tables And Items</h1>
       <Tables />
     </PageWrapper>
   );
