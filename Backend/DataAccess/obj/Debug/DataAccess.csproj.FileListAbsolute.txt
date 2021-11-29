@@ -6,60 +6,6 @@ C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\D
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\DataAccess.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Data.SqlClient.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Data.SqlClient.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\DataAccess.dll.config
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Buffers.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Memory.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Security.Cryptography.Algorithms.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Security.Cryptography.Primitives.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Text.Json.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.ValueTuple.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.Helpers.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.Razor.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.WebPages.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Buffers.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Memory.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Text.Json.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.ValueTuple.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.Helpers.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.Razor.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.WebPages.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\bin\Debug\DataAccess.dll.config
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll

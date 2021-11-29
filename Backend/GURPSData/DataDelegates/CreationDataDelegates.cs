@@ -179,7 +179,7 @@ namespace GURPSData.DataDelegates {
         public override ItemCategory Translate(SqlCommand command) {
             int ItemCategoryID = (int)command.Parameters["ItemCategoryID"].Value;
             bool IsDefault = (bool)command.Parameters["IsDefault"].Value;
-            DateTime CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            DateTime CreatedOn = ((DateTimeOffset)command.Parameters["CreatedOn"].Value).DateTime;
             return new ItemCategory(ItemCategoryID,OwningUserID,Name,IsDefault,CreatedOn);
         }//end Translate(command)
     }//end class CreateItemCategoryDataDelegate
