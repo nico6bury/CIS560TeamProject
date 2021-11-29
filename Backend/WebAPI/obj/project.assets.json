@@ -5899,25 +5899,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sarah.diener\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\nicos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\sarah.diener\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sarah.diener\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -5928,12 +5928,13 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "projectReferences": {
-            "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj": {
-              "projectPath": "C:\\Users\\sarah.diener\\Desktop\\School\\CIS560\\GroupProject\\CIS560TeamProject\\Backend\\GURPSData\\GURPSData.csproj"
+            "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj": {
+              "projectPath": "C:\\Users\\nicos\\Desktop\\Programming Stuff\\CIS560-Databases\\Team Project\\Backend\\GURPSData\\GURPSData.csproj"
             }
           }
         }
@@ -5946,6 +5947,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "targetAlias": "netcoreapp3.0",
         "dependencies": {
           "Microsoft.AspNet.WebApi.Cors": {
             "target": "Package",
@@ -5966,6 +5968,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5974,7 +5994,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   },

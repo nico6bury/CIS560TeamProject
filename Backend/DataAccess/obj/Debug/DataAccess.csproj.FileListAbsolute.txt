@@ -13,3 +13,4 @@ C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backe
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
