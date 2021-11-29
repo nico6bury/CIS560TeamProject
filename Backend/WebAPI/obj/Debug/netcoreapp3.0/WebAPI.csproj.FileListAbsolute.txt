@@ -87,6 +87,13 @@ C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backe
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Http.Cors.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Razor.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Helpers.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.WebPages.Deployment.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.WebPages.Razor.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.WebPages.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\Microsoft.Web.Infrastructure.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\DataAccess.dll.config
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Cors.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Net.Http.Formatting.dll

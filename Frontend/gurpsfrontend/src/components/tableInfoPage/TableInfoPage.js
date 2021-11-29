@@ -43,18 +43,18 @@ export default function TableInfoPage() {
 
   useEffect(() => {
     //doFetch();
-  });
+  }, []);
 
   const doFetch = () => {
-    fetch("http://localhost:5000/req/generate", {
+    fetch("http://localhost:5000/api/RetrieveAllItems", {
       method: "post",
       headers: {
-        //"Content-Type": "application/json",
-        //"Access-Control-Allow-Credentials": true,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
       body: JSON.stringify({
-        typeRequest: "getUserDefinedTables",
+        username: "getUserDefinedTables",
       }),
     })
       .then((res) => res.json())
@@ -62,12 +62,8 @@ export default function TableInfoPage() {
         (result) => {
           console.log(result);
           //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            return;
-          } else {
-            setIsLoaded("loaded");
-          }
+          setUserTables(result);
+          setIsLoaded("loaded");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow

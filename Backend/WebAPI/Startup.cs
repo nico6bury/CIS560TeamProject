@@ -31,6 +31,7 @@ namespace WebAPI {
             // Add our repository type
             services.AddSingleton<IUserRepo, UserRepo>();
             services.AddSingleton<IItemCategoryRepo, ItemCategoryRepo>();
+            services.AddSingleton<IItemRepo, ItemRepo>();
             services.AddCors();
         }//end ConfigureServices(services)
 

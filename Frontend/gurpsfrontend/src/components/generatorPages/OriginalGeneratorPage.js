@@ -42,32 +42,26 @@ export default function OriginalGeneratorPage() {
   useEffect(() => {
     //fetch the itemCategoryData
     //doFetch();
-  });
+  }, []);
 
   const doFetch = () => {
-    fetch("http://localhost:5000", {
+    fetch("http://localhost:5000/api/RetrieveDefaultItemCategories", {
       method: "post",
       headers: {
-        //"Content-Type": "application/json",
-        //"Access-Control-Allow-Credentials": true,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
-      body: JSON.stringify({
-        typeRequest: "getOriginalItemCategoryData",
-      }),
+      body: JSON.stringify({}),
     })
       .then((res) => res.json())
       .then(
         (result) => {
           console.log(result);
           //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            return;
-          }
 
           setIsLoaded("loaded");
-          setItemCategoryData(mapDataToCheckboxes(result.data));
+          setItemCategoryData(mapDataToCheckboxes(result));
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow

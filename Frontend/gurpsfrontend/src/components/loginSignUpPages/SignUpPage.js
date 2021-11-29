@@ -16,7 +16,13 @@ export default function SignUpPage({ setIsLoggedIn }) {
       return;
     }
     //The following will attempt to log the user in
-    doFetch();
+    let thing = JSON.stringify({
+      username: username,
+      password: password,
+      isAdmin: true,
+      //joinedOn: null,
+    });
+    doFetch(thing);
 
     //The following is for testing purposes and is to simulate a call to the backend to log the user in
     //setIsLoaded("incorrect");
@@ -26,19 +32,13 @@ export default function SignUpPage({ setIsLoggedIn }) {
 
   //Procedure or function 'CreateUser' expects parameter '@Username', which was not supplied.'
 
-  const doFetch = () => {
-    fetch("http://localhost:5000/api/CreateUser", {
-      method: "post",
+  const doFetch = (jsonToSend) => {
+    fetch(`http://localhost:5000/api/CreateUser/${jsonToSend}`, {
+      method: "get",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
       },
-
-      body: JSON.stringify({
-        username: username,
-        password: password,
-        //Send username and password
-      }),
     })
       .then((res) => res.json())
       .then(

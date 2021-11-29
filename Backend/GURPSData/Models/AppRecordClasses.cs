@@ -47,9 +47,14 @@ namespace GURPSData.Models {
         /// <param name="password"></param>
         /// <param name="isAdmin"></param>
         /// <param name="joinedOn"></param>
-        public User(int userID, string username, string password, bool isAdmin, DateTime joinedOn) {
+        //public User(int userID, string username, string password, bool isAdmin, DateTime joinedOn) {
+        //    this.UserID = userID; this.Username = username; this.Password = password;
+        //    this.IsAdmin = isAdmin; this.JoinedOn = joinedOn;
+        //}//end constructor
+
+        public User(int userID, string username, string password, bool isAdmin) {
             this.UserID = userID; this.Username = username; this.Password = password;
-            this.IsAdmin = isAdmin; this.JoinedOn = joinedOn;
+            this.IsAdmin = isAdmin; this.JoinedOn = new DateTime(2024-03-11);
         }//end constructor
 
         /// <summary>

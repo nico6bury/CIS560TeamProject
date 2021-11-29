@@ -21,3 +21,4 @@ C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\G
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.csproj.CopyComplete
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.pdb
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\GURPSData\bin\Debug\netcoreapp3.0\DataAccess.dll.config
