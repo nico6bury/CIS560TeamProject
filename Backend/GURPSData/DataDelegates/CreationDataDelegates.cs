@@ -713,7 +713,7 @@ namespace GURPSData.DataDelegates {
         /// <summary>
         /// The name of the table which generated this item.
         /// </summary>
-        public readonly string GeneratingTableName;
+        public readonly string GeneratingCategoryName;
         /// <summary>
         /// The quantity of this item in this particular instance.
         /// </summary>
@@ -742,16 +742,16 @@ namespace GURPSData.DataDelegates {
         /// <param name="owningUserID"></param>
         /// <param name="name"></param>
         /// <param name="description"></param>
-        /// <param name="generatingTableName"></param>
+        /// <param name="generatingCategoryName"></param>
         /// <param name="quantity"></param>
         /// <param name="unitPrice"></param>
         /// <param name="baseWeight"></param>
         /// <param name="weightType"></param>
         public CreateInventoryItemDataDelegate(int owningUserID, string name, string description,
-            string generatingTableName, int quantity, int unitPrice, int baseWeight,
+            string generatingCategoryName, int quantity, int unitPrice, int baseWeight,
             string weightType) : base("GeneratedItems.CreateInventoryItem") {
             this.OwningUserID = owningUserID; this.Name = name;
-            this.Description = description; this.GeneratingTableName = generatingTableName;
+            this.Description = description; this.GeneratingCategoryName = generatingCategoryName;
             this.Quantity = quantity; this.UnitPrice = unitPrice; this.BaseWeight = baseWeight;
             this.WeightType = weightType;
         }//end constructor
@@ -790,7 +790,7 @@ namespace GURPSData.DataDelegates {
             }//end looping over fields of this class.
 
             // add class specific parameter(s)
-            var o = command.Parameters.Add("InventoryID", SqlDbType.Int);
+            var o = command.Parameters.Add("InventoryItemID", SqlDbType.Int);
             o.Direction = ParameterDirection.Output;
             o = command.Parameters.Add("GeneratedOn", SqlDbType.DateTimeOffset);
             o.Direction = ParameterDirection.Output;
@@ -804,10 +804,19 @@ namespace GURPSData.DataDelegates {
         /// <param name="command">The command used to get certain properties.</param>
         /// <returns>Object of type InventoryItem.</returns>
         public override InventoryItem Translate(SqlCommand command) {
-            int InventoryID = (int)command.Parameters["InventoryID"].Value;
-            DateTime GeneratedOn = (DateTime)command.Parameters["GeneratedOn"].Value;
-            DateTime EditedOn = (DateTime)command.Parameters["EditedOn"].Value;
-            return new InventoryItem(InventoryID,OwningUserID,Name,Description,GeneratingTableName,
+            int InventoryID = (int)command.Parameters["InventoryItemID"].Value;
+            DateTime GeneratedOn = DateTime.Now;
+            DateTime EditedOn = DateTime.Now;
+            try {
+                GeneratedOn = (DateTime)command.Parameters["GeneratedOn"].Value;
+            }
+            catch { GeneratedOn = DateTime.Now; }
+            try {
+                EditedOn = (DateTime)command.Parameters["EditedOn"].Value;
+            }
+            catch { EditedOn = GeneratedOn; }
+            
+            return new InventoryItem(InventoryID,OwningUserID,Name,Description,GeneratingCategoryName,
                 Quantity,UnitPrice,BaseWeight,WeightType,GeneratedOn,EditedOn);
         }//end Translate(command)
     }//end class CreateInventoryItemDataDelegate

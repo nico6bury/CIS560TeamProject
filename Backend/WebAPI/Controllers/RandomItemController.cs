@@ -27,9 +27,9 @@ namespace WebAPI.Controllers {
  
         }
 
-        public IItemCategoryRepo ICs { get; set; }
-        public IItemRepo Is { get; set; }
-        public IInventoryRepo INs { get; set; }
+        public IItemCategoryRepo ICs { get; set; } = new ItemCategoryRepo();
+        public IItemRepo Is { get; set; } = new ItemRepo();
+        public IInventoryRepo INs { get; set; } = new InventoryRepo();
 
 
     }
