@@ -54,7 +54,7 @@ namespace GURPSData.Models {
 
         public User(int userID, string username, string password, bool isAdmin) {
             this.UserID = userID; this.Username = username; this.Password = password;
-            this.IsAdmin = isAdmin; this.JoinedOn = new DateTime(2024-03-11);
+            this.IsAdmin = isAdmin; this.JoinedOn = DateTime.Now;
         }//end constructor
 
         /// <summary>
