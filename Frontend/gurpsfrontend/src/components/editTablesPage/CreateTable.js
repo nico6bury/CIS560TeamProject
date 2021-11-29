@@ -33,29 +33,23 @@ export default function EditTablesPage({
   };
 
   const doFetch = () => {
+    let send = JSON.stringify({
+      userId: userId,
+      name: inputData.tableName,
+    });
     //Do userInfo fetch here and set returned values to state
-    fetch("http://localhost:5000", {
-      method: "post",
+    fetch(`http://localhost:5000/api/CreateCategory/${send}`, {
+      method: "get",
       headers: {
         //"Content-Type": "application/json",
         //"Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
-      body: JSON.stringify({
-        typeRequest: "sendNewTable",
-        tableName: inputData.tableName,
-        userId: userId,
-      }),
     })
       .then((res) => res.json())
       .then(
         (result) => {
           console.log(result);
-          //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoadedSuccessOrErrorMessage("errorCreatingTable");
-            return;
-          }
           setIsLoadedSuccessOrErrorMessage("successCreatingTable");
         },
         // Note: it's important to handle errors here

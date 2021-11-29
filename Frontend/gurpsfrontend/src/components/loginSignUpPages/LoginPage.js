@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react/cjs/react.production.min";
 
 export default function LoginPage({ setIsLoggedIn }) {
   const [username, setUserName] = useState("");
@@ -26,8 +27,8 @@ export default function LoginPage({ setIsLoggedIn }) {
 
   const doFetch = () => {
     let jsonUn = JSON.stringify({ username: username });
-    fetch(`http://localhost:5000/api/RetrieveUserForUsername/${jsonUn}`, {
-      method: "post",
+    fetch(`http://localhost:5000/api/RetrieveUserForUsername/${username}`, {
+      method: "get",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
@@ -37,8 +38,9 @@ export default function LoginPage({ setIsLoggedIn }) {
       .then(
         (result) => {
           console.log(result);
-          if (password === result.password) {
+          if (password === result[0].password) {
             setIsLoggedIn(true);
+            setUserId(result[0].userId);
           } else {
             setIsLoggedIn(false);
             setIsLoaded("incorrect");
