@@ -14,7 +14,7 @@ import EditTablesPage from "./components/editTablesPage/EditTablesPage";
 import StatisticsPage from "./components/statisticsPage/StatisticsPage";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
   const [userId, setUserId] = useState(null);
   const [isLoaded, setIsLoaded] = useState(null);
@@ -30,11 +30,11 @@ function App() {
 
   const fetchUserData = () => {
     //Do userInfo fetch here and set returned values to state
-    fetch("http://localhost:5000/req/userInfo", {
+    fetch("http://localhost:5000/api/Overall", {
       method: "post",
       headers: {
-        //"Content-Type": "application/json",
-        //"Access-Control-Allow-Credentials": true,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
       body: JSON.stringify({}),
@@ -44,24 +44,24 @@ function App() {
         (result) => {
           console.log(result);
           //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            setIsLoggedIn(false);
-            return;
-          }
-          //If the user is not logged in
-          if (result.response.data.loggedIn === 0) {
-            setIsLoggedIn(false);
-            //setIsLoaded("incorrect");
-            return;
-          }
-          //The user is logged in
-          if (result.response.data.loggedIn === 1) {
-            setIsLoggedIn(true);
-            setUserId(result.response.data.dealerid);
-            setUserName(result.response.data.dealerName);
-            setIsLoaded("loaded");
-          }
+          // if (result.response.apiStatusCode !== "OK") {
+          //   setIsLoaded("error");
+          //   setIsLoggedIn(false);
+          //   return;
+          // }
+          // //If the user is not logged in
+          // if (result.response.data.loggedIn === 0) {
+          //   setIsLoggedIn(false);
+          //   //setIsLoaded("incorrect");
+          //   return;
+          // }
+          // //The user is logged in
+          // if (result.response.data.loggedIn === 1) {
+          //   setIsLoggedIn(true);
+          //   setUserId(result.response.data.dealerid);
+          //   setUserName(result.response.data.dealerName);
+          //   setIsLoaded("loaded");
+          // }
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow

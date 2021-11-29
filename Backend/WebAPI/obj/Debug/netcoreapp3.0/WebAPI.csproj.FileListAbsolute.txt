@@ -10,7 +10,6 @@ C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backe
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.csprojAssemblyReference.cache
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\staticwebassets\WebAPI.StaticWebAssets.Manifest.cache
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\staticwebassets\WebAPI.StaticWebAssets.xml
-C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.AssemblyInfoInputs.cache
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.AssemblyInfo.cs
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.RazorTargetAssemblyInfo.cache
@@ -59,3 +58,33 @@ C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\W
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.pdb
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.genruntimeconfig.cache
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\DataAccess.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\GURPSData.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\DataAccess.pdb
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\GURPSData.pdb
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.csproj.CopyComplete
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\Microsoft.Win32.Registry.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Data.SqlClient.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Security.AccessControl.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Security.Principal.Windows.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Text.Encoding.CodePages.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win-arm64\native\sni.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win-x64\native\sni.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Cors.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Net.Http.Formatting.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Http.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Http.Cors.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache

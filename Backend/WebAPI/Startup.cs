@@ -31,6 +31,7 @@ namespace WebAPI {
             // Add our repository type
             services.AddSingleton<IUserRepo, UserRepo>();
             services.AddSingleton<IItemCategoryRepo, ItemCategoryRepo>();
+            services.AddCors();
         }//end ConfigureServices(services)
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +46,14 @@ namespace WebAPI {
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
+
+                // global cors policy
+                app.UseCors(x => x
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true) // allow any origin
+                                                        //.WithOrigins("https://localhost:44351")); // Allow only this origin can also have multiple origins separated with comma
+                    .AllowCredentials()); // allow credentials
             });
         }//end Configure(app, env)
     }//end class

@@ -16,53 +16,59 @@ export default function LoginPage({ setIsLoggedIn }) {
       return;
     }
     //The following will attempt to log the user in
-    //doFetch();
+    doFetch();
 
     //The following is for testing purposes and is to simulate a call to the backend to log the user in
     //setIsLoaded("incorrect");
     history.push(`/`);
-    setIsLoggedIn(true);
+    //setIsLoggedIn(true);
   };
 
   const doFetch = () => {
-    fetch("http://localhost:5000/req/login", {
+    fetch("http://localhost:5000/api/RetrieveUserForUsername", {
       method: "post",
       headers: {
-        //"Content-Type": "application/json",
-        //"Access-Control-Allow-Credentials": true,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
 
       body: JSON.stringify({
         username: username,
-        password: password,
         //Send username and password
+        //@ v#ry $tr0ng,_S3cUre P@ssc#de >; + ]
       }),
     })
       .then((res) => res.json())
       .then(
         (result) => {
           console.log(result);
-          //If error
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            //return;
-          }
-          //If the user is not logged in
-          else if (result.response.data.loggedIn === 0) {
-            setIsLoggedIn(false);
-            setIsLoaded("incorrect");
-            //return;
-          }
-          //The user is logged in
-          else if (result.response.data.loggedIn === 1) {
+          if (password === result.password) {
             setIsLoggedIn(true);
-            //return;
-          }
-          //We somehow made it down here, just print the invalid message
-          else {
-            setIsLoaded("incorrect");
+          } else {
             setIsLoggedIn(false);
+            setIsLoaded("incorrect");
           }
+          //If error
+          // if (result.response.apiStatusCode !== "OK") {
+          //   setIsLoaded("error");
+          //   //return;
+          // }
+          // //If the user is not logged in
+          // else if (result.response.data.loggedIn === 0) {
+          //   setIsLoggedIn(false);
+          //   setIsLoaded("incorrect");
+          //   //return;
+          // }
+          // //The user is logged in
+          // else if (result.response.data.loggedIn === 1) {
+          //   setIsLoggedIn(true);
+          //   //return;
+          // }
+          // //We somehow made it down here, just print the invalid message
+          // else {
+          //   setIsLoaded("incorrect");
+          //   setIsLoggedIn(false);
+          // }
           //The user is logged in
           //setIsLoggedIn(true);
           //console.log(result);
