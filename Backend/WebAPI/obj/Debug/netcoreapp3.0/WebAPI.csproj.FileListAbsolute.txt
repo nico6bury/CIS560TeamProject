@@ -101,3 +101,10 @@ C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\W
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Http.Cors.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Razor.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.Helpers.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.WebPages.Deployment.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.WebPages.Razor.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\System.Web.WebPages.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\Microsoft.Web.Infrastructure.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\WebAPI\bin\Debug\netcoreapp3.0\DataAccess.dll.config
