@@ -14,7 +14,7 @@ import EditTablesPage from "./components/editTablesPage/EditTablesPage";
 import StatisticsPage from "./components/statisticsPage/StatisticsPage";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [userName, setUserName] = useState("");
   const [userId, setUserId] = useState(null);
   const [isLoaded, setIsLoaded] = useState(null);

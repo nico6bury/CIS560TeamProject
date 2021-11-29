@@ -97,8 +97,8 @@ namespace GURPSData.DataDelegates {
         public override User Translate(SqlCommand command) {
             int UserID = (int)command.Parameters["UserID"].Value;
             bool IsAdmin = (bool)command.Parameters["IsAdmin"].Value;
-            DateTime JoinedOn = (DateTime)command.Parameters["JoinedOn"].Value;
-            return new User(UserID,Username,Password,IsAdmin,JoinedOn);
+            //DateTime JoinedOn = (DateTime)command.Parameters["JoinedOn"].Value;
+            return new User(UserID,Username,Password,IsAdmin);
         }//end Translate(command)
     }//end class CreateUserDataDelegate
     /// <summary>

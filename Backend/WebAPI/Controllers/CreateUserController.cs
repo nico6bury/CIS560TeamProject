@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GURPSData.Repositories;
 using GURPSData.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+//using System.Web.Helpers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,13 +23,17 @@ namespace WebAPI.Controllers {
         // GET: api/<controller>
 
 
-        [HttpGet("{username},{password}")]
-        public User CreateUser(string username, string password) {
-            return Users.CreateUser(username, password);
+        [HttpGet("{jsonString}")]
+        public User CreateUser(string jsonString) {
+
+            User decoded = JsonConvert.DeserializeObject<User>(jsonString, new IsoDateTimeConverter { DateTimeFormat = "yyyy-mm-dd" });
+
+            return Users.CreateUser(decoded.Username, decoded.Password);
         }
 
         [HttpPost]
-        public User CreateUserPost([FromBody] string username, [FromBody] string password) {
+        public User CreateUserPost([FromBody] string username, string password) {
+            Console.WriteLine(username);
             return Users.CreateUser(username, password);
         }
 

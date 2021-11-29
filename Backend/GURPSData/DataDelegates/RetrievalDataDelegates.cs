@@ -24,9 +24,10 @@ namespace GURPSData.DataDelegates {
                     reader.GetInt32("UserID"),
                     reader.GetString("Username"),
                     reader.GetString("Password"),
-                    reader.GetValue<bool>("IsAdmin"),
-                    reader.GetDateTimeOffset("JoinedOn").DateTime
+                    reader.GetValue<bool>("IsAdmin")
+                    
                     ));
+                //reader.GetDateTimeOffset("JoinedOn").DateTime
             }//end looping while we have stuff to read
             return users;
         }//end Translate(command,reader)
@@ -47,9 +48,10 @@ namespace GURPSData.DataDelegates {
                     reader.GetInt32("UserID"),
                     reader.GetString("Username"),
                     reader.GetString("Password"),
-                    reader.GetValue<bool>("IsAdmin"),
-                    reader.GetDateTimeOffset("JoinedOn").DateTime
+                    reader.GetValue<bool>("IsAdmin")
                     ));
+                //,
+                //reader.GetDateTimeOffset("JoinedOn").DateTime
             }//end looping while we have stuff to read
             return users;
         }//end Translate(command,reader)
@@ -72,9 +74,10 @@ namespace GURPSData.DataDelegates {
                     reader.GetInt32("UserID"),
                     reader.GetString("Username"),
                     reader.GetString("Password"),
-                    reader.GetValue<bool>("IsAdmin"),
-                    reader.GetDateTimeOffset("JoinedOn").DateTime
+                    reader.GetValue<bool>("IsAdmin")
+                    
                     ));
+                //reader.GetDateTimeOffset("JoinedOn").DateTime
             }//end looping while we have stuff to read
             return users;
         }//end Translate(command,reader)
