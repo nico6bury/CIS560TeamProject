@@ -31,7 +31,7 @@ namespace GURPSData.DataDelegates {
         /// <summary>
         /// The username of this particular user. Used to log in.
         /// </summary>
-        public readonly string Username;
+        public string Username;
         /// <summary>
         /// THe password of this particular user account. Used to log in.
         /// </summary>

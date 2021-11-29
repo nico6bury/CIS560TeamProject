@@ -25,18 +25,13 @@ export default function LoginPage({ setIsLoggedIn }) {
   };
 
   const doFetch = () => {
-    fetch("http://localhost:5000/api/RetrieveUserForUsername", {
+    let jsonUn = JSON.stringify({ username: username });
+    fetch(`http://localhost:5000/api/RetrieveUserForUsername/${jsonUn}`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
       },
-
-      body: JSON.stringify({
-        username: username,
-        //Send username and password
-        //@ v#ry $tr0ng,_S3cUre P@ssc#de >; + ]
-      }),
     })
       .then((res) => res.json())
       .then(

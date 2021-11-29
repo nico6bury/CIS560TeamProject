@@ -63,9 +63,7 @@ namespace GURPSData.DataDelegates {
             { this.Username = username; }
         public override void PrepareCommand(SqlCommand command) {
             base.PrepareCommand(command);
-            //command.Parameters.AddWithValue("Username", Username);
-            var p = command.Parameters.Add("Username", System.Data.SqlDbType.NVarChar);
-            p.Value = Username;
+            command.Parameters.AddWithValue("Username", Username);
         }//end PrepareCommand(command)
         public override IReadOnlyList<User> Translate(SqlCommand command, IDataRowReader reader) {
             var users = new List<User>();
@@ -100,6 +98,44 @@ namespace GURPSData.DataDelegates {
             return categories;
         }//end Translate(command, reader)
     }//end class RetrieveAllItemCategoriesDateDelegate
+    public class RetrieveItemCategoriesForIDDataDelegate : DataReaderDelegate<IReadOnlyList<ItemCategory>> {
+        public readonly int ItemCategoryID;
+        public RetrieveItemCategoriesForIDDataDelegate(int itemCategoryID) :
+            base("AppRecords.RetrieveItemCategoriesForID") { this.ItemCategoryID = itemCategoryID; }
+        public override void PrepareCommand(SqlCommand command) {
+            base.PrepareCommand(command);
+            command.Parameters.AddWithValue("ItemCategoryID", ItemCategoryID);
+        }//end PrepareCommand(command)
+        public override IReadOnlyList<ItemCategory> Translate(SqlCommand command, IDataRowReader reader) {
+            var categories = new List<ItemCategory>();
+            while (reader.Read()) {
+                categories.Add(new ItemCategory(
+                    reader.GetInt32("ItemCategoryID"),
+                    reader.GetInt32("OwningUserID"),
+                    reader.GetString("Name"),
+                    reader.GetValue<bool>("IsDefault"),
+                    reader.GetDateTimeOffset("CreatedOn").DateTime
+                    ));
+            }//end looping while we have stuff to read
+            return categories;
+        }//end Translate(command, reader)
+    }//end class RetrieveItemCategoriesForIDDataDelegate
+    public class RetrieveDefaultItemCategoriesDataDelegate : DataReaderDelegate<IReadOnlyList<ItemCategory>> {
+        public RetrieveDefaultItemCategoriesDataDelegate() : base("AppRecords.RetrieveDefaultItemCategories") { }
+        public override IReadOnlyList<ItemCategory> Translate(SqlCommand command, IDataRowReader reader) {
+            var categories = new List<ItemCategory>();
+            while (reader.Read()) {
+                categories.Add(new ItemCategory(
+                    reader.GetInt32("ItemCategoryID"),
+                    reader.GetInt32("OwningUserID"),
+                    reader.GetString("Name"),
+                    reader.GetValue<bool>("IsDefault"),
+                    reader.GetDateTimeOffset("CreatedOn").DateTime
+                    ));
+            }//end looping while we have stuff to read
+            return categories;
+        }//end Translate(command, reader)
+    }//end class RetrieveDefaultItemCategoriesDataDelegate
 
     public class RetrieveAllItemsDataDelegate : DataReaderDelegate<IReadOnlyList<Item>> {
         public RetrieveAllItemsDataDelegate()
@@ -123,6 +159,87 @@ namespace GURPSData.DataDelegates {
             return items;
         }//end Translate(command, reader)
     }//end class RetrieveAllItemsDataDelegate
+    public class RetrieveItemsForCategoryIDDataDelegate : DataReaderDelegate<IReadOnlyList<Item>> {
+        private readonly int ItemCategoryID;
+        public RetrieveItemsForCategoryIDDataDelegate(int itemCategoryID) :
+            base("AppRecords.RetrieveItemsForCategoryID") { this.ItemCategoryID = itemCategoryID; }
+        public override void PrepareCommand(SqlCommand command) {
+            base.PrepareCommand(command);
+            command.Parameters.AddWithValue("ItemCategoryID", ItemCategoryID);
+        }//end PrepareCommand(command)
+        public override IReadOnlyList<Item> Translate(SqlCommand command, IDataRowReader reader) {
+            var items = new List<Item>();
+            while (reader.Read()) {
+                items.Add(new Item(
+                    reader.GetInt32("ItemID"),
+                    reader.GetString("Name"),
+                    reader.GetInt32("UnitPrice"),
+                    reader.GetInt32("BaseWeight"),
+                    reader.GetString("WeightType"),
+                    reader.GetInt32("QuantityMin"),
+                    reader.GetInt32("QuantityMax"),
+                    reader.GetString("Description"),
+                    reader.GetInt32("RelativeChance"),
+                    reader.GetDateTimeOffset("CreatedOn").DateTime)
+                    );
+            }//end looping while we have stuff to read
+            return items;
+        }//end Translate(command, reader)
+    }//end class RetrieveItemsForCategoryIDDataDelegate
+    public class RetrieveItemsForUserIDDataDelegate : DataReaderDelegate<IReadOnlyList<Item>> {
+        private readonly int UserID;
+        public RetrieveItemsForUserIDDataDelegate(int userID) :
+            base("AppRecords.RetrieveItemsForUserID") { this.UserID = userID; }
+        public override void PrepareCommand(SqlCommand command) {
+            base.PrepareCommand(command);
+            command.Parameters.AddWithValue("UserID", UserID);
+        }//end PrepareCommand(command)
+        public override IReadOnlyList<Item> Translate(SqlCommand command, IDataRowReader reader) {
+            var items = new List<Item>();
+            while (reader.Read()) {
+                items.Add(new Item(
+                    reader.GetInt32("ItemID"),
+                    reader.GetString("Name"),
+                    reader.GetInt32("UnitPrice"),
+                    reader.GetInt32("BaseWeight"),
+                    reader.GetString("WeightType"),
+                    reader.GetInt32("QuantityMin"),
+                    reader.GetInt32("QuantityMax"),
+                    reader.GetString("Description"),
+                    reader.GetInt32("RelativeChance"),
+                    reader.GetDateTimeOffset("CreatedOn").DateTime)
+                    );
+            }//end looping while we have stuff to read
+            return items;
+        }//end Translate(command, reader)
+    }//end class RetrieveItemsForUserIDDataDelegate
+    public class RetrieveItemsForIDDataDelegate : DataReaderDelegate<IReadOnlyList<Item>> {
+        private readonly int ItemID;
+        public RetrieveItemsForIDDataDelegate(int itemID) : base("AppRecords.RetrieveItemsForID")
+            { this.ItemID = itemID; }
+        public override void PrepareCommand(SqlCommand command) {
+            base.PrepareCommand(command);
+            command.Parameters.AddWithValue("ItemID", ItemID);
+        }//end PrepareCommand(command)
+        public override IReadOnlyList<Item> Translate(SqlCommand command, IDataRowReader reader) {
+            var items = new List<Item>();
+            while (reader.Read()) {
+                items.Add(new Item(
+                    reader.GetInt32("ItemID"),
+                    reader.GetString("Name"),
+                    reader.GetInt32("UnitPrice"),
+                    reader.GetInt32("BaseWeight"),
+                    reader.GetString("WeightType"),
+                    reader.GetInt32("QuantityMin"),
+                    reader.GetInt32("QuantityMax"),
+                    reader.GetString("Description"),
+                    reader.GetInt32("RelativeChance"),
+                    reader.GetDateTimeOffset("CreatedOn").DateTime)
+                    );
+            }//end looping while we have stuff to read
+            return items;
+        }//end Translate(command, reader)
+    }//end class RetrieveItemsForIDDataDelegate
 
     public class RetrieveAllItemSubcategoriesDataDelegate
         : DataReaderDelegate<IReadOnlyList<ItemSubcategory>> {

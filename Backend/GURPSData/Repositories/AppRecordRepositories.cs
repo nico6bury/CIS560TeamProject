@@ -55,11 +55,13 @@ namespace GURPSData.Repositories {
         }//end RetrieveAllItemCategories()
 
         public IReadOnlyList<ItemCategory> RetrieveDefaultItemCategories() {
-            throw new NotImplementedException();
+            var d = new RetrieveDefaultItemCategoriesDataDelegate();
+            return executor.ExecuteReader(d);
         }//end RetrieveDefaultItemCategories()
 
         public IReadOnlyList<ItemCategory> RetrieveItemCategoriesForID(int itemCatgoryID) {
-            throw new NotImplementedException();
+            var d = new RetrieveItemCategoriesForIDDataDelegate(itemCatgoryID);
+            return executor.ExecuteReader(d);
         }//end RetrieveItemCategoriesForID(itemCategoryID)
 
         public IReadOnlyList<ItemCategory> RetrieveItemCategoriesForUserID(int userID) {
@@ -89,11 +91,13 @@ namespace GURPSData.Repositories {
         }//end RetrieveAllItems()
 
         public IReadOnlyList<Item> RetrieveItemsForCategoryID(int categoryID) {
-            throw new NotImplementedException();
+            var d = new RetrieveItemsForCategoryIDDataDelegate(categoryID);
+            return executor.ExecuteReader(d);
         }//end RetrieveItemsForCategoryID(categoryID)
 
         public IReadOnlyList<Item> RetrieveItemsForID(int itemID) {
-            throw new NotImplementedException();
+            var d = new RetrieveItemsForIDDataDelegate(itemID);
+            return executor.ExecuteReader(d);
         }//end RetrieveItemsForID(itemID)
 
         public IReadOnlyList<Item> RetrieveItemsForName(string name) {
@@ -101,7 +105,8 @@ namespace GURPSData.Repositories {
         }//end RetrieveItemsForName(name)
 
         public IReadOnlyList<Item> RetrieveItemsForUserID(int userID) {
-            throw new NotImplementedException();
+            var d = new RetrieveItemsForUserIDDataDelegate(userID);
+            return executor.ExecuteReader(d);
         }//end RetrieveItemsForUserID(userID)
 
         public void SaveItem(int itemID, string name, string description, int unitPrice, int baseWeight, string weightType, int quantityMin, int quantityMax, int relativeChance) {
