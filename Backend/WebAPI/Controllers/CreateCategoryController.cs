@@ -25,7 +25,7 @@ namespace WebAPI.Controllers {
         [HttpGet("{json}")]
         public ItemCategory CreateCategoryGet(string json) {
             NewItemCategory ic = JsonConvert.DeserializeObject<NewItemCategory>(json);
-            return ICs.CreateItemCategory(ic.OwningUserID, ic.Name);
+            return ICs.CreateItemCategory(ic.OwningUserID, ic.Name, "");
         }
 
     }
