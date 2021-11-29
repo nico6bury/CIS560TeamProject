@@ -99,8 +99,12 @@ namespace GURPSData {
         /// Item3: List of inventoryIDs of items generated. <para />
         /// Item4: Total cost of all items generated. This takes quantity
         /// for individual items into account.</returns>
-        /// <exception cref="ArgumentException"></exception>
-        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="ArgumentException">Generated when <paramref name="itemCategoryID"/> is either
+        /// 0 or less than -2.</exception>
+        /// <exception cref="InvalidOperationException">Generated when the pool of available items
+        /// (base on <paramref name="itemCategoryID"/>) is filtered to the point
+        /// that there are no items for us to pick from. Ie, we look for items in
+        /// a particular category, and there's nothing there, or something similar.</exception>
         /// <remarks>Exception explanation:<para />
         /// ArgumentException: Generated when <paramref name="itemCategoryID"/> is either
         /// 0 or less than -2.<para />
