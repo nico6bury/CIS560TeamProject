@@ -109,8 +109,8 @@ namespace GURPSData {
         /// that there are no items for us to pick from. Ie, we look for items in
         /// a particular category, and there's nothing there, or something similar.</remarks>
         public static (ISet<string>, IList<int>, IList<int>, int)
-            GenerateRandomItemsForUser(ItemRepo itemRepo, InventoryRepo inventoryRepo,
-            ItemCategoryRepo itemCategoryRepo,
+            GenerateRandomItemsForUser(IItemRepo itemRepo, IInventoryRepo inventoryRepo,
+            IItemCategoryRepo itemCategoryRepo,
             uint numItems, int itemCategoryID, int userID) {
             // setup some variables to get returned
             ISet<string> itemNames = new HashSet<string>();

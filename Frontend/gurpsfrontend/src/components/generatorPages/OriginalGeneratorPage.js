@@ -34,7 +34,7 @@ let declaredExtrasData = [
   },
 ];
 
-export default function OriginalGeneratorPage() {
+export default function OriginalGeneratorPage({ userId }) {
   const [itemCategoryData, setItemCategoryData] = useState(fakeICD);
   const [extrasData, setExtrasData] = useState(declaredExtrasData);
   const [isLoaded, setIsLoaded] = useState("");
@@ -94,15 +94,16 @@ export default function OriginalGeneratorPage() {
           typeBox="Original"
           originalData={itemCategoryData}
           spicyData={""}
+          userId={userId}
         />
         <div className="spacer1" />
-        <Filters
+        {/* <Filters
           itemCategoryData={itemCategoryData}
           setItemCategoryData={setItemCategoryData}
           extrasData={extrasData}
           setExtrasData={setExtrasData}
           isSpicy={false}
-        ></Filters>
+        ></Filters> */}
       </div>
     </PageWrapper>
   );

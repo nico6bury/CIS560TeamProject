@@ -84,7 +84,11 @@ function App() {
         <div className="contentWrapper">
           <Sidebar isLoggedIn={isLoggedIn} />
           <Switch>
-            <Route exact path="/" component={OriginalGeneratorPage} />
+            <Route
+              exact
+              path="/"
+              render={(props) => <OriginalGeneratorPage userId={userId} />}
+            />
             <Route
               path="/login"
               render={(props) => (

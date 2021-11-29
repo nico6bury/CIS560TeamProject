@@ -19,7 +19,12 @@ let fakeData = [
     price: "$100000.90",
   },
 ];
-export default function GenerateBox({ typeBox, originalData, spicyData }) {
+export default function GenerateBox({
+  typeBox,
+  originalData,
+  spicyData,
+  userId,
+}) {
   const [nextGenerated, setNextGenerated] = useState("");
   const [counter, setCounter] = useState(0);
   const [isLoaded, setIsLoaded] = useState("");
@@ -44,43 +49,36 @@ export default function GenerateBox({ typeBox, originalData, spicyData }) {
         tables.push(item);
       }
     });
-    spicyData.map((item) => {
-      if (item.checked === true) {
-        tables.push(item);
-      }
-    });
+    // spicyData.map((item) => {
+    //   if (item.checked === true) {
+    //     tables.push(item);
+    //   }
+    // });
 
     setIsLoaded("okay");
-    //doFetch(typeBox, tables);
-    setRandResult(fakeData);
+    doFetch(tables);
+    //setRandResult(fakeData);
   };
 
   const doFetch = (tablesToInclude) => {
-    fetch("http://localhost:5000/req/generate", {
-      method: "post",
+    let send = JSON.stringify({
+      NumItems: numberGenerate,
+      UserId: userId,
+    });
+    fetch(`http://localhost:5000/api/RandomItem/${send}`, {
+      method: "get",
       headers: {
         //"Content-Type": "application/json",
         //"Access-Control-Allow-Credentials": true,
       },
       //credentials: "include",
-      body: JSON.stringify({
-        tables: tablesToInclude,
-        numberGenerate: numberGenerate,
-        typeRequest: "getRandomLoot",
-      }),
     })
       .then((res) => res.json())
       .then(
         (result) => {
           console.log(result);
-          //If there was an error fetching the data
-          if (result.response.apiStatusCode !== "OK") {
-            setIsLoaded("error");
-            return;
-          } else {
-            setRandResult(result.response);
-            setIsLoaded("loaded");
-          }
+          setRandResult(result);
+          setIsLoaded("loaded");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
