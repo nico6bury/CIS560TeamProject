@@ -6,9 +6,7 @@ using System.Text;
 
 namespace GURPSData.Repositories {
     public class ReportRepos {
-        private readonly SqlCommandExecutor executor;
-        public ReportRepos(string connectionString)
-            { executor = new SqlCommandExecutor(connectionString); }
+        private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
 
         /// <summary>
         /// For each user, show number of tables they’ve created,

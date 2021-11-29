@@ -12,10 +12,7 @@ namespace GURPSData.Repositories {
     /// table in GeneratedItems schema of database.
     /// </summary>
     public class InventoryRepo : IInventoryRepo {
-        private readonly SqlCommandExecutor executor;
-        public InventoryRepo(string connectionString) {
-            executor = new SqlCommandExecutor(connectionString);
-        }//end constructor
+        private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
 
         public InventoryItem CreateInventoryItem(int owningUserID, string name, string description, string generatingCategoryName, int quantity, int unitPrice, int baseWeight, string weightType) {
             var d = new CreateInventoryItemDataDelegate(owningUserID, name, description, generatingCategoryName, quantity, unitPrice, baseWeight, weightType);
@@ -65,10 +62,7 @@ namespace GURPSData.Repositories {
     /// table in GeneratedItems schema of database.
     /// </summary>
     public class CreatedEmbellishmentRepo : ICreatedEmbellishmentRepo {
-        private readonly SqlCommandExecutor executor;
-        public CreatedEmbellishmentRepo(string connectionString) {
-            executor = new SqlCommandExecutor(connectionString);
-        }//end constructor
+        private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
 
         public CreatedEmbellishment CreateInventoryEmbellishment(string name, string description, string generatingCategoryName, decimal costFactor, decimal weightFactor) {
             var d = new CreateInventoryEmbellishmentDataDelegate(name, description, generatingCategoryName, costFactor, weightFactor);
@@ -98,10 +92,7 @@ namespace GURPSData.Repositories {
     /// table in GeneratedItems schema of database.
     /// </summary>
     public class CreatedEnchantmentRepo : ICreatedEnchantmentRepo {
-        private readonly SqlCommandExecutor executor;
-        public CreatedEnchantmentRepo(string connectionString) {
-            executor = new SqlCommandExecutor(connectionString);
-        }//end constructor
+        private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
         
         public CreatedEnchantment CreateInventoryEnchantment(string name, string description, string generatingCategoryName, int cost, decimal weightFactor, string powerReserveType, int powerReserveAmount) {
             var d = new CreateInventoryEnchantmentDataDelegate(name, description, generatingCategoryName, cost, weightFactor, powerReserveType, powerReserveAmount);
@@ -131,10 +122,7 @@ namespace GURPSData.Repositories {
     /// table in GeneratedItems schema of database.
     /// </summary>
     public class EmbellishmentRefRepo : IEmbellishmentRefRepo {
-        private readonly SqlCommandExecutor executor;
-        public EmbellishmentRefRepo(string connectionString) {
-            executor = new SqlCommandExecutor(connectionString);
-        }//end constructor
+        private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
 
         public void DeleteEmbellishmentRef(int createdEmbellishmentID, int inventoryID) {
             var d = new DeleteEmbellishmentRefDataDelegate(createdEmbellishmentID, inventoryID);
@@ -168,10 +156,7 @@ namespace GURPSData.Repositories {
     /// table in GeneratedItems schema of database.
     /// </summary>
     public class EnchantmentRefRepo : IEnchantmentRefRepo {
-        private readonly SqlCommandExecutor executor;
-        public EnchantmentRefRepo(string connectionString) {
-            executor = new SqlCommandExecutor(connectionString);
-        }//end constructor
+        private readonly SqlCommandExecutor executor = new SqlCommandExecutor(Statics.BuildConnectionString());
 
         public void DeleteEnchantmentRef(int createdEnchantmentID, int inventoryID) {
             var d = new DeleteEnchantmentRefDataDelegate(createdEnchantmentID, inventoryID);
