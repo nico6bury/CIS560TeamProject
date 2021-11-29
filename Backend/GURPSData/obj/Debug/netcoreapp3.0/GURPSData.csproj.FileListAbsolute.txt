@@ -9,3 +9,15 @@ C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backe
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.csproj.CopyComplete
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.dll
 C:\Users\sarah.diener\Desktop\School\CIS560\GroupProject\CIS560TeamProject\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.0\GURPSData.deps.json
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.0\GURPSData.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.0\GURPSData.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.0\DataAccess.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\bin\Debug\netcoreapp3.0\DataAccess.pdb
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.csproj.AssemblyReference.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.AssemblyInfoInputs.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.AssemblyInfo.cs
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.csproj.CoreCompileInputs.cache
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.csproj.CopyComplete
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.dll
+C:\Users\nicos\Desktop\Programming Stuff\CIS560-Databases\Team Project\Backend\GURPSData\obj\Debug\netcoreapp3.0\GURPSData.pdb
