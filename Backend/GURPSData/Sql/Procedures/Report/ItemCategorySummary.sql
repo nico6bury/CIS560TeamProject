@@ -1,8 +1,8 @@
 CREATE OR ALTER PROCEDURE AppRecords.ItemCategorySummary
 AS
 SELECT IC.ItemCategoryID, IC.[Name], IC.[Description],U.Username AS OwningUser,
-AVG(I.UnitPrice) AS AverageCost, AVG(I.BaseWeight) AS AverageWeight,
-SUM(I.UnitPrice) AS TotalCost, SUM(I.BaseWeight) AS TotalWeight
+COALESCE(AVG(I.UnitPrice), 0) AS AverageCost, COALESCE(AVG(I.BaseWeight), 0) AS AverageWeight,
+COALESCE(SUM(I.UnitPrice), 0) AS TotalCost, COALESCE(SUM(I.BaseWeight), 0) AS TotalWeight
 FROM AppRecords.ItemCategory IC LEFT JOIN AppRecords.ItemSubcategory ISC ON
 IC.ItemCategoryID = ISC.ItemCategoryID LEFT JOIN AppRecords.Item I ON
 I.ItemID = ISC.ItemID LEFT JOIN AppRecords.[User] U ON
