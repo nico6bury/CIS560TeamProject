@@ -12,10 +12,6 @@ export default function UserInventoryStat({ data }) {
         accessor: "name",
       },
       {
-        Header: "Generating Table",
-        accessor: "generatingTableName",
-      },
-      {
         Header: "Earliest Generation",
         accessor: "earliestGeneration",
       },

@@ -87,6 +87,7 @@ export default function TableInfoPage({ userId }) {
           </div>
           <div className="tableWrap">
             <UserTable data={item.data} />
+            <div className="separaterBottom" />
           </div>
         </div>
       );
@@ -106,5 +107,8 @@ const PageWrapper = styled.nav`
   .tableWrap {
     display: flex;
     margin-right: 20px;
+  }
+  .separaterBottom {
+    margin-bottom: 20px;
   }
 `;

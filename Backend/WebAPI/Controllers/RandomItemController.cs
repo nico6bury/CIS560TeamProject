@@ -24,16 +24,16 @@ namespace WebAPI.Controllers {
         public List<Item> Get(string id) {
             NewItemGenerator ic = JsonConvert.DeserializeObject<NewItemGenerator>(id);
             List<Item> toReturn = new List<Item>();
-            //try {
+            try {
                 IList<int> list = Statics.GenerateRandomItemsForUser(Is, INs, ICs, ic.NumItems, ic.TypeGenerate, ic.UserId).Item2;
                 toReturn = new List<Item>();
                 foreach (int i in list) {
                     toReturn.Add(Is.RetrieveItemsForID(i)[0]);
                 }
-            //}//end try
-            //catch (Exception e) {
-            //    Console.WriteLine(e);
-            //}
+            }//end try
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
             
             return (toReturn);
         }
