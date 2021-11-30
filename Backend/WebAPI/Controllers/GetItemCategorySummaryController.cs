@@ -23,16 +23,45 @@ namespace WebAPI.Controllers {
 
 
         [HttpGet]
-        public IReadOnlyList<ItemCategorySummary> RetrieveCategorySummaryGet() {
+        public List<ItemCategorySummaryRemake> RetrieveCategorySummaryGet() {
             //NewCategoryIdOb catId = JsonConvert.DeserializeObject<NewCategoryIdOb>(json);
-                IReadOnlyList<ItemCategorySummary> toReturn = Summary.GetItemCategorySummary();
+            IReadOnlyList<ItemCategorySummary> toReturn = Summary.GetItemCategorySummary();
+            //Console.WriteLine(toReturn[0].Name + "\n\n\n");
+            List<ItemCategorySummaryRemake> toActReturn = new List<ItemCategorySummaryRemake>();
+            foreach(ItemCategorySummary i in toReturn) {
+                toActReturn.Add(new ItemCategorySummaryRemake(i.Name, i.Description, i.OwningUser, i.AverageCost, i.AverageWeight, i.TotalCost, i.TotalWeight));
+            }
 
-            return toReturn;
+
+            return toActReturn;
         }
 
 
-
     }//end class
+
+
+    public class ItemCategorySummaryRemake {
+        public ItemCategorySummaryRemake(string name, string desc, string ou, int avcos, int avweig, int totcos, int totweg) {
+            Name = name;
+            Description = desc;
+            OwningUser = ou;
+            AverageCost = avcos;
+            AverageWeight = avweig;
+            TotalCost = totcos;
+            TotalWeight = totweg;
+        }
+
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+        public string OwningUser { get; set; }
+        public  int AverageCost { get; set; }
+        public  int AverageWeight { get; set; }
+        public int TotalCost { get; set; }
+        public int TotalWeight { get; set; }
+    }
+
+
 
     public class NewCategoryIdOb {
         public NewCategoryIdOb(int catid) {

@@ -32,6 +32,7 @@ namespace WebAPI {
             services.AddSingleton<IUserRepo, UserRepo>();
             services.AddSingleton<IItemCategoryRepo, ItemCategoryRepo>();
             services.AddSingleton<IItemRepo, ItemRepo>();
+            services.AddSingleton<ReportRepos>();
             services.AddCors();
         }//end ConfigureServices(services)
 

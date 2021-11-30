@@ -13,7 +13,7 @@ export default function UserTable({ data }) {
       },
       {
         Header: "Base Price",
-        accessor: "basePrice",
+        accessor: "unitPrice",
       },
       {
         Header: "Base Weight",
