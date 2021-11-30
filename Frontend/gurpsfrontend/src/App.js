@@ -106,12 +106,18 @@ function App() {
             {isLoggedIn && (
               <Fragment>
                 <Route path="/spicygenerator" component={SpicyGeneratorPage} />
-                <Route path="/tableinfo" component={TableInfoPage} />
+                <Route
+                  path="/tableinfo"
+                  render={(props) => <TableInfoPage userId={userId} />}
+                />
                 <Route
                   path="/edittables"
                   render={(props) => <EditTablesPage userId={userId} />}
                 />
-                <Route path="/statistics" component={StatisticsPage} />
+                <Route
+                  path="/statistics"
+                  render={(props) => <StatisticsPage userId={userId} />}
+                />
               </Fragment>
             )}
           </Switch>

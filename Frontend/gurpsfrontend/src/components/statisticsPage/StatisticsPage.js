@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import CategoryStat from "./CategoryStat";
 import Stat from "./Stat";
 
 export default function StatisticsPage({ userId }) {
@@ -8,36 +9,65 @@ export default function StatisticsPage({ userId }) {
   const [numberOfItems, setNumberOfItems] = useState();
   const [joinedOn, setJoinedOn] = useState();
   const [numberGenerated, setNumberGenerated] = useState();
+  const [allCategoryInfo, setAllCategoryInfo] = useState("");
+  const [itemsGenerated, setItemsGenerated] = useState("");
+  const [tablesUsed, setTablesUsed] = useState("");
 
   useEffect(() => {
-    //doFetch();
-    setNumberOfItems("4");
-    setNumberOfTables("2");
-    setJoinedOn("2021-27-11");
-    setNumberGenerated("50");
+    doCategoryFetch();
+    doUserFetch();
   }, []);
 
-  const doFetch = () => {
-    fetch("http://localhost:5000/api/GetUserInventorySummary", {
-      method: "post",
+  const doCategoryFetch = () => {
+    fetch("http://localhost:5000/api/GetItemCategorySummary", {
+      method: "get",
       headers: {
         //"Content-Type": "application/json",
         //"Access-Control-Allow-Credentials": true,
       },
-      //credentials: "include",
-      body: JSON.stringify({
-        requestType: "getUserStatistics",
-        userId: userId,
-      }),
     })
       .then((res) => res.json())
       .then(
         (result) => {
           console.log(result);
+          setAllCategoryInfo(result);
+          //If there was an error fetching the data
+          // setJoinedOn(result.joinedOn);
+          // setNumberOfTables(result.numberOfTables);
+          // setNumberOfItems(result.numberOfItems);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded("error");
+          //console.log(error);
+        }
+      );
+  };
+
+  const doUserFetch = () => {
+    let send = JSON.stringify({
+      UserId: userId,
+    });
+    fetch(`http://localhost:5000/api/GetUserItemSummary/${send}`, {
+      method: "get",
+      headers: {
+        //"Content-Type": "application/json",
+        //"Access-Control-Allow-Credentials": true,
+      },
+    })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+          //setAllCategoryInfo(result);
           //If there was an error fetching the data
           setJoinedOn(result.joinedOn);
           setNumberOfTables(result.numberOfTables);
           setNumberOfItems(result.numberOfItems);
+          setTablesUsed(result.tablesUsed);
+          setItemsGenerated(result.itemsGenerated);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -60,6 +90,12 @@ export default function StatisticsPage({ userId }) {
         <Stat title="Number of Items Created" data={numberOfItems} />
         <div className="separaterBottom" />
         <Stat title="Total Number of Items Generated" data={numberGenerated} />
+        <div className="separaterBottom" />
+        <Stat title="Number of Tables Generated From" data={tablesUsed} />
+        <div className="separaterBottom" />
+        <Stat title="Number of Items Generated" data={itemsGenerated} />
+        <div className="separaterBottom" />
+        <CategoryStat data={allCategoryInfo} />
         <div className="separaterBottom" />
       </div>
     </PageWrapper>

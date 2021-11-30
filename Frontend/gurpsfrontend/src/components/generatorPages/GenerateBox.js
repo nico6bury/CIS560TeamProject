@@ -61,9 +61,15 @@ export default function GenerateBox({
   };
 
   const doFetch = (tablesToInclude) => {
+    let typeGen = -2;
+    if (typeBox === "Spicy") {
+      typeGen = -1;
+    }
+
     let send = JSON.stringify({
       NumItems: numberGenerate,
       UserId: userId,
+      TypeGenerate: typeGen,
     });
     fetch(`http://localhost:5000/api/RandomItem/${send}`, {
       method: "get",

@@ -48,25 +48,63 @@ let fakeUserData = [
 ];
 
 export default function EditTablesPage({ userId }) {
-  const [tableData, setTableData] = useState(fakeUserData);
+  const [tableData, setTableData] = useState([]);
   const [isLoadedSuccessOrErrorMessage, setIsLoadedSuccessOrErrorMessage] =
     useState("");
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    doFetch();
+  }, []);
+
+  const doFetch = () => {
+    //console.log(inputData.tableName + userId);
+    let send = JSON.stringify({
+      UserId: userId,
+    });
+    //Do userInfo fetch here and set returned values to state
+    fetch(`http://localhost:5000/api/RetrieveAllItemsInTables/${send}`, {
+      method: "get",
+      headers: {
+        //"Content-Type": "application/json",
+        //"Access-Control-Allow-Credentials": true,
+      },
+      //credentials: "include",
+    })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+          setTableData(result);
+          setIsLoaded(true);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoadedSuccessOrErrorMessage("errorCreatingTable");
+          //console.log(error);
+        }
+      );
+  };
 
   return (
     <PageWrapper>
       <h3>Edit/Add Tables</h3>
-      {/* <DisplayAndEditTables tableData={tableData} /> */}
+      <DisplayAndEditTables tableData={tableData} />
       <div className="separaterBottom" />
       <CreateTable
         userId={userId}
         isLoadedSuccessOrErrorMessage={isLoadedSuccessOrErrorMessage}
         setIsLoadedSuccessOrErrorMessage={setIsLoadedSuccessOrErrorMessage}
       />
-      <AddItems
-        tables={tableData}
-        isLoadedSuccessOrErrorMessage={isLoadedSuccessOrErrorMessage}
-        setIsLoadedSuccessOrErrorMessage={setIsLoadedSuccessOrErrorMessage}
-      />
+      {isLoaded && (
+        <AddItems
+          tables={tableData}
+          isLoadedSuccessOrErrorMessage={isLoadedSuccessOrErrorMessage}
+          setIsLoadedSuccessOrErrorMessage={setIsLoadedSuccessOrErrorMessage}
+        />
+      )}
     </PageWrapper>
   );
 }
