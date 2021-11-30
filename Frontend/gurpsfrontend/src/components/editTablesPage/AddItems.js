@@ -191,7 +191,7 @@ export default function AddItems({
             <form className="addNewItemForm">
               <input
                 className="formInput separaterBottom2"
-                name="itemName"
+                name="name"
                 placeholder="Item Name"
                 size="12"
                 maxLength={20}
@@ -242,7 +242,7 @@ export default function AddItems({
                 name="description"
                 placeholder="Item Description"
                 size="20"
-                maxLength={20}
+                maxLength={40}
                 onChange={handleInputChange}
               />
               <input

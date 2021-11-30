@@ -113,6 +113,7 @@ export default function UserTable({ data }) {
 const PageWrapper = styled.nav`
   display: flex;
   flex-direction: column;
+  max-width: 900px;
   .wrapText {
     max-width: 350px;
     word-wrap: break-word;

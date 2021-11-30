@@ -47,7 +47,7 @@ let fakeUserDefinedTables = [
   },
 ];
 
-export default function SpicyGeneratorPage() {
+export default function SpicyGeneratorPage({ userId }) {
   const [itemCategoryData, setItemCategoryData] = useState(fakeICD);
   const [extrasData, setExtrasData] = useState(declaredExtrasData);
   const [tablesToInclude, setTablesToInclude] = useState();
@@ -115,6 +115,7 @@ export default function SpicyGeneratorPage() {
       <h1>GURPS Generator With User-Defined Tables</h1>
       <div className="pageContent">
         <GenerateBox
+          userId={userId}
           typeBox="Spicy"
           originalData={itemCategoryData}
           spicyData={itemCategoryUDData}
