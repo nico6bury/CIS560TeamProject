@@ -179,7 +179,11 @@ namespace GURPSData.DataDelegates {
         public override ItemCategory Translate(SqlCommand command) {
             int ItemCategoryID = (int)command.Parameters["ItemCategoryID"].Value;
             bool IsDefault = (bool)command.Parameters["IsDefault"].Value;
-            DateTime CreatedOn = ((DateTimeOffset)command.Parameters["CreatedOn"].Value).DateTime;
+            DateTime CreatedOn = DateTime.Now;
+            try {
+                CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            }
+            catch { CreatedOn = DateTime.Now; }
             return new ItemCategory(ItemCategoryID,OwningUserID,Name,IsDefault,CreatedOn);
         }//end Translate(command)
     }//end class CreateItemCategoryDataDelegate
@@ -297,7 +301,11 @@ namespace GURPSData.DataDelegates {
         /// <returns>Object of type Item.</returns>
         public override Item Translate(SqlCommand command) {
             int ItemID = (int)command.Parameters["ItemID"].Value;
-            DateTime CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            DateTime CreatedOn = DateTime.Now;
+            try {
+                CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            }
+            catch { CreatedOn = DateTime.Now; }
             return new Item(ItemID, Name, UnitPrice, BaseWeight, WeightType, QuantityMin,
                 QuantityMax, Description, RelativeChance, CreatedOn); ;
         }//end Translate(command)
@@ -385,7 +393,11 @@ namespace GURPSData.DataDelegates {
         /// <returns>Object of type EmbellishmentCategory.</returns>
         public override EmbellishmentCategory Translate(SqlCommand command) {
             int EmbellishmentCategoryID = (int)command.Parameters["EmbellishmentCategoryID"].Value;
-            DateTime CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            DateTime CreatedOn = DateTime.Now;
+            try {
+                CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            }
+            catch { CreatedOn = DateTime.Now; }
             return new EmbellishmentCategory(EmbellishmentCategoryID, OwningUserID, Name,
                 RelativeChance, Description, CreatedOn); ;
         }//end Translate(command)
@@ -487,7 +499,11 @@ namespace GURPSData.DataDelegates {
         /// <returns>Object of type Embellishment.</returns>
         public override Embellishment Translate(SqlCommand command) {
             int EmbellishmentID = (int)command.Parameters["EmbellishmentID"].Value;
-            DateTime CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            DateTime CreatedOn = DateTime.Now;
+            try {
+                CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            }
+            catch { CreatedOn = DateTime.Now; }
             return new Embellishment(EmbellishmentID, EmbellishmentCategoryID, Name,
                 Description, CostFactor, WeightFactor, RelativeChance, CreatedOn); ;
         }//end Translate(command)
@@ -575,7 +591,11 @@ namespace GURPSData.DataDelegates {
         /// <returns>Object of type EnchantmentCategory.</returns>
         public override EnchantmentCategory Translate(SqlCommand command) {
             int EnchantmentCategoryID = (int)command.Parameters["EnchantmentCategoryID"].Value;
-            DateTime CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            DateTime CreatedOn = DateTime.Now;
+            try {
+                CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            }
+            catch { CreatedOn = DateTime.Now; }
             return new EnchantmentCategory(EnchantmentCategoryID,OwningUserID,Name,
                 RelativeChance,Description,CreatedOn);
         }//end Translate(command)
@@ -689,7 +709,11 @@ namespace GURPSData.DataDelegates {
         /// <returns>Object of type Enchantment.</returns>
         public override Enchantment Translate(SqlCommand command) {
             int EnchantmentID = (int)command.Parameters["EnchantmentID"].Value;
-            DateTime CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            DateTime CreatedOn = DateTime.Now;
+            try {
+                CreatedOn = (DateTime)command.Parameters["CreatedOn"].Value;
+            }
+            catch { CreatedOn = DateTime.Now; }
             return new Enchantment(EnchantmentID,EnchantmentCategoryID,Name,Description,
                 Cost,WeightFactor,RelativeChance,PowerReserveType,PowerReserveAmount,CreatedOn);
         }//end Translate(command)
