@@ -94,7 +94,7 @@ export default function OriginalGeneratorPage({ userId }) {
           typeBox="Original"
           originalData={itemCategoryData}
           spicyData={""}
-          userId={userId}
+          userId={1}
         />
         <div className="spacer1" />
         {/* <Filters

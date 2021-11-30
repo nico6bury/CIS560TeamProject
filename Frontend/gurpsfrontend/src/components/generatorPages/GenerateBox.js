@@ -69,7 +69,7 @@ export default function GenerateBox({
     let send = JSON.stringify({
       NumItems: numberGenerate,
       UserId: userId,
-      TypeGenerate: typeGen,
+      TypeGenerate: -1,
     });
     fetch(`http://localhost:5000/api/RandomItem/${send}`, {
       method: "get",
@@ -113,6 +113,18 @@ export default function GenerateBox({
       {
         Header: "Price",
         accessor: "unitPrice",
+      },
+      {
+        Header: "Description",
+        accessor: "description",
+      },
+      {
+        Header: "Quantity Min",
+        accessor: "quantityMin",
+      },
+      {
+        Header: "Quantity Max",
+        accessor: "quantityMax",
       },
     ],
     []
@@ -206,6 +218,7 @@ export default function GenerateBox({
 const PageWrapper = styled.nav`
   display: flex;
   flex-direction: column;
+  max-width: 900px;
   .wrapText {
     max-width: 350px;
     word-wrap: break-word;

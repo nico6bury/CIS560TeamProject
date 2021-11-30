@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import CategoryStat from "./CategoryStat";
 import Stat from "./Stat";
+import UserInventoryStat from "./UserInventoryStat";
 
 export default function StatisticsPage({ userId }) {
   const [isLoaded, setIsLoaded] = useState("");
@@ -12,10 +13,12 @@ export default function StatisticsPage({ userId }) {
   const [allCategoryInfo, setAllCategoryInfo] = useState([]);
   const [itemsGenerated, setItemsGenerated] = useState();
   const [tablesUsed, setTablesUsed] = useState("");
+  const [userInventoryData, setUserInventoryData] = useState([]);
 
   useEffect(() => {
     doCategoryFetch();
     doUserFetch();
+    doUserInventoryFetch();
   }, []);
 
   const doCategoryFetch = () => {
@@ -81,6 +84,36 @@ export default function StatisticsPage({ userId }) {
       );
   };
 
+  const doUserInventoryFetch = () => {
+    let send = JSON.stringify({
+      UserId: userId,
+    });
+    fetch(`http://localhost:5000/api/GetUserInventorySummary/${send}`, {
+      method: "get",
+      headers: {
+        //"Content-Type": "application/json",
+        //"Access-Control-Allow-Credentials": true,
+      },
+    })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+          //setAllCategoryInfo(result);
+          //If there was an error fetching the data
+          setUserInventoryData(result);
+          setIsLoaded("loaded");
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded("error");
+          //console.log(error);
+        }
+      );
+  };
+
   return (
     <PageWrapper>
       {isLoaded === "loaded" && (
@@ -92,18 +125,19 @@ export default function StatisticsPage({ userId }) {
           <div className="separaterBottom" />
           <Stat title="Number of Items Created" data={numberOfItems} />
           <div className="separaterBottom" />
-          <Stat
-            title="Total Number of Items Generated"
-            data={numberGenerated}
-          />
+          <Stat title="Total Number of Items Generated" data={itemsGenerated} />
           <div className="separaterBottom" />
           <Stat title="Number of Tables Generated From" data={tablesUsed} />
           <div className="separaterBottom" />
-          <Stat title="Number of Items Generated" data={itemsGenerated} />
           <div className="separaterBottom" />
           <div className="separaterBottom" />
           <h3>Table Statistics</h3>
           <CategoryStat data={allCategoryInfo} />
+          <div className="separaterBottom" />
+          <div className="separaterBottom" />
+          <div className="separaterBottom" />
+          <h3>User Inventory Statistics</h3>
+          <UserInventoryStat data={userInventoryData} />
           <div className="separaterBottom" />
         </div>
       )}

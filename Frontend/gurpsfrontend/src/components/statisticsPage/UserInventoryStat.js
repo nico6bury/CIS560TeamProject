@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useTable, useSortBy } from "react-table";
 
-export default function UserTable({ data }) {
+export default function UserInventoryStat({ data }) {
   const [isLoaded, setIsLoaded] = useState("");
 
   const columns = React.useMemo(
@@ -12,32 +12,24 @@ export default function UserTable({ data }) {
         accessor: "name",
       },
       {
-        Header: "Base Price",
+        Header: "Generating Table",
+        accessor: "generatingTableName",
+      },
+      {
+        Header: "Earliest Generation",
+        accessor: "earliestGeneration",
+      },
+      {
+        Header: "Latest Generation",
+        accessor: "latestGeneration",
+      },
+      {
+        Header: "Unit Price",
         accessor: "unitPrice",
       },
       {
         Header: "Base Weight",
         accessor: "baseWeight",
-      },
-      {
-        Header: "Weight Type",
-        accessor: "weightType",
-      },
-      {
-        Header: "Quantity Min",
-        accessor: "quantityMin",
-      },
-      {
-        Header: "Quantity Max",
-        accessor: "quantityMax",
-      },
-      {
-        Header: "Description",
-        accessor: "description",
-      },
-      {
-        Header: "Relative Chance",
-        accessor: "relativeChance",
       },
     ],
     []
@@ -118,7 +110,6 @@ const PageWrapper = styled.nav`
     max-width: 350px;
     word-wrap: break-word;
   }
-
   .generateWrapper {
     display: flex;
     flex-direction: row;

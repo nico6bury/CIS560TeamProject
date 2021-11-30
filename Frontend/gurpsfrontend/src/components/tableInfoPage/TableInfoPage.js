@@ -38,7 +38,7 @@ let fakeUserData = [
 ];
 
 export default function TableInfoPage({ userId }) {
-  const [userTables, setUserTables] = useState(fakeUserData);
+  const [userTables, setUserTables] = useState([]);
   const [isLoaded, setIsLoaded] = useState("");
 
   useEffect(() => {
