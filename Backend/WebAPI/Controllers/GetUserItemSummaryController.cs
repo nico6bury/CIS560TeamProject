@@ -23,21 +23,45 @@ namespace WebAPI.Controllers {
 
 
         [HttpGet("{json}")]
-        public UserItemSummary RetrieveCategorySummaryGet(string json) {
+        public UserItemSummaryRemake RetrieveCategorySummaryGet(string json) {
             NewUserIdOb userId = JsonConvert.DeserializeObject<NewUserIdOb>(json);
             IReadOnlyList<UserItemSummary> toNotReturn = Summary.GetUserItemSummary();
             UserItemSummary toReturn = new UserItemSummary();
-            foreach(UserItemSummary i in toNotReturn) {
-                if(i.UserID == userId.UserId) {
+            foreach (UserItemSummary i in toNotReturn) {
+                if (i.UserID == userId.UserId) {
                     toReturn = i;
                 }
             }
-            return toReturn;
+            UserItemSummaryRemake toActReturn = new UserItemSummaryRemake(toReturn.UserID, toReturn.Username, toReturn.TablesCreated, toReturn.ItemsCreated, toReturn.TablesUsed, toReturn.ItemsGenerated, toReturn.JoinedOn);
+            return toActReturn;
         }
 
 
 
     }//end class
+
+
+    public class UserItemSummaryRemake {
+        public UserItemSummaryRemake(int userID, string username,
+            int tablesCreated, int itemsCreated, int tablesUsed,
+            int itemsGenerated, DateTime joinedOn) {
+            UserId = userID;
+            Username = username;
+            TablesCreated = tablesCreated;
+           ItemsCreated = itemsCreated;
+            TablesUsed = tablesUsed;
+            ItemsGenerated = itemsGenerated;
+            JoinedOn = joinedOn;
+        }
+
+        public int UserId { get; set; }
+        public string Username { get; set; }
+        public int TablesCreated { get; set; }
+        public int ItemsCreated { get; set; }
+        public int TablesUsed { get; set; }
+        public int ItemsGenerated { get; set; }
+        public DateTime JoinedOn { get; set; }
+    }
 
 
 }

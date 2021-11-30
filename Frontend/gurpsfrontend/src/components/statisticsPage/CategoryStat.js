@@ -9,11 +9,11 @@ export default function CategoryStat({ data }) {
           <div>
             <b>{item.name}</b>
           </div>
-          <div>{item.description}</div>
-          <div>{item.owningUser}</div>
-          <div>{item.averageCost}</div>
-          <div>{item.averageWeight}</div>
-          <div>{item.totalWeight}</div>
+          <div>-Description: {item.description}</div>
+          <div>-Owning User: {item.owningUser}</div>
+          <div>-Average Cost Of An Item: {item.averageCost}</div>
+          <div>-Average Weight Of An Item: {item.averageWeight}</div>
+          <div>-Total Weight Of All Items: {item.totalWeight}</div>
           <div className="separaterBottom" />
         </div>
       );
@@ -36,6 +36,8 @@ const PageWrapper = styled.nav`
     flex-direction: row;
     border: 2px solid black;
     padding: 3px;
+    max-width: 400px;
+    overflow-wrap: break-word;
   }
   .resultWrapper {
     display: flex;

@@ -9,8 +9,8 @@ export default function StatisticsPage({ userId }) {
   const [numberOfItems, setNumberOfItems] = useState();
   const [joinedOn, setJoinedOn] = useState();
   const [numberGenerated, setNumberGenerated] = useState();
-  const [allCategoryInfo, setAllCategoryInfo] = useState("");
-  const [itemsGenerated, setItemsGenerated] = useState("");
+  const [allCategoryInfo, setAllCategoryInfo] = useState([]);
+  const [itemsGenerated, setItemsGenerated] = useState();
   const [tablesUsed, setTablesUsed] = useState("");
 
   useEffect(() => {
@@ -31,6 +31,7 @@ export default function StatisticsPage({ userId }) {
         (result) => {
           console.log(result);
           setAllCategoryInfo(result);
+
           //If there was an error fetching the data
           // setJoinedOn(result.joinedOn);
           // setNumberOfTables(result.numberOfTables);
@@ -64,10 +65,11 @@ export default function StatisticsPage({ userId }) {
           //setAllCategoryInfo(result);
           //If there was an error fetching the data
           setJoinedOn(result.joinedOn);
-          setNumberOfTables(result.numberOfTables);
-          setNumberOfItems(result.numberOfItems);
+          setNumberOfTables(result.tablesCreated);
+          setNumberOfItems(result.itemsCreated);
           setTablesUsed(result.tablesUsed);
           setItemsGenerated(result.itemsGenerated);
+          setIsLoaded("loaded");
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -81,23 +83,30 @@ export default function StatisticsPage({ userId }) {
 
   return (
     <PageWrapper>
-      <div className="statsWrapper">
-        <h3>Statistics</h3>
-        <Stat title="Joined On" data={joinedOn} />
-        <div className="separaterBottom" />
-        <Stat title="Number of Tables Created" data={numberOfTables} />
-        <div className="separaterBottom" />
-        <Stat title="Number of Items Created" data={numberOfItems} />
-        <div className="separaterBottom" />
-        <Stat title="Total Number of Items Generated" data={numberGenerated} />
-        <div className="separaterBottom" />
-        <Stat title="Number of Tables Generated From" data={tablesUsed} />
-        <div className="separaterBottom" />
-        <Stat title="Number of Items Generated" data={itemsGenerated} />
-        <div className="separaterBottom" />
-        <CategoryStat data={allCategoryInfo} />
-        <div className="separaterBottom" />
-      </div>
+      {isLoaded === "loaded" && (
+        <div className="statsWrapper">
+          <h3>User Statistics</h3>
+          <Stat title="Joined On" data={joinedOn} />
+          <div className="separaterBottom" />
+          <Stat title="Number of Tables Created" data={numberOfTables} />
+          <div className="separaterBottom" />
+          <Stat title="Number of Items Created" data={numberOfItems} />
+          <div className="separaterBottom" />
+          <Stat
+            title="Total Number of Items Generated"
+            data={numberGenerated}
+          />
+          <div className="separaterBottom" />
+          <Stat title="Number of Tables Generated From" data={tablesUsed} />
+          <div className="separaterBottom" />
+          <Stat title="Number of Items Generated" data={itemsGenerated} />
+          <div className="separaterBottom" />
+          <div className="separaterBottom" />
+          <h3>Table Statistics</h3>
+          <CategoryStat data={allCategoryInfo} />
+          <div className="separaterBottom" />
+        </div>
+      )}
     </PageWrapper>
   );
 }
